@@ -9,7 +9,7 @@ line. It is intended to be used for contact details -->
 
 <!-- The paragraph after the h1 and ul and before the first h2 is optional. It
 is intended to be used for a short summary. -->
-I'm an aspiring technology professional with various passion projects. I'm always excited to enhance and further my knowledge through practical experience. I'm also looking toward the future by pursuing the Google TensorFlow Developer Certification which shows proficiency with Machine Learning concepts and development. I am a capable leader with years of public speaking experience. I connect with team members an find ways to make everyone's voices and heard and ideas incorporated.
+I'm an aspiring technology professional with various passion projects. I'm always excited to enhance and further my knowledge through practical experience. I'm also looking toward the future by pursuing the Google TensorFlow Developer Certification which shows proficiency with Machine Learning concepts and development. I am a capable leader with years of public speaking experience. I connect with team members and encourage everyone to speak out and incorporate their ideas.
 
 ## Experience
 
@@ -36,7 +36,7 @@ Students are assigned a nation and are made to debate on a predetermined issue w
 
 ### <span>Participant/Toastmasters</span> <span>2016 - 2018</span>
 
-Toastmasters is a worldwide nonprofit organization which teaches people of various ages about public speaking. Competitions are held and prizes are awarded for good performances.
+Toastmasters is a worldwide nonprofit organization which teaches people of various ages about public speaking.
 
 - Won 2nd for an improvisation speech
 - Was in the Advanced group from 2017-2018
@@ -102,9 +102,9 @@ I'm currently pursuing the TensorFlow Developer Certification which is used to d
 ## Skills
 
  - Languages: Java, Python, C, Shell
- - Operating Systems: GNU/Linux, macOS, OpenBSD
+ - Operating Systems: GNU/Linux, macOS, OpenBSD, Windows 7/10
  - Web Development: HTML, CSS, Markdown, Flask
- - Misc: vim, Final Cut Pro, GSuite, Apple Office Suite
+ - Misc: vim, Final Cut Pro, GSuite, Apple iLife, Microsoft Office
 
 ## Personal
 
