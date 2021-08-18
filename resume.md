@@ -64,6 +64,23 @@ Awards:
 - FTC Programming Award in 2019
 - FRC Worlds in 2020
 
+### <span>Volunteer/Robbinsville Hydroponics + Farmer's Market</span> <span>2021 - Present</span>
+
+Robbinsville Township operates an enclosed hydroponic farm which grows lettuce in a sustainable manner. All of the produce is donated to the local food bank
+
+- Harvested lettuce
+- Bagged and Boxed the lettuce for shippment
+- Seeded to grow more lettuce
+- Volunteered at the township stand at the Farmer's Market to promote local buisnesses and give people info about township initiatives
+
+### <span>Volunteer/ProjectOxy</span> <span>2021 - Present</span>
+
+A worldwide effort to provide an open source oxygen concentrator, provide resources to individuals, manfacturers, scientists and vendors about oxygen supply and help vendors, manufacturers and clients connect with eachother to save lives. The initiative came as a result of the oxygen shortage in India during COVID spikes.
+
+- Conducted an Interview with a prominent engineer in India
+- Conducted research on oxygen storage and concentration and shared it as part of the Engineering team
+- Working with SBCs to automate and design prototypes
+
 ## Projects
 
 ### <span>neossg</span> <span>2020 - 2021</span>
@@ -102,16 +119,22 @@ I'm currently pursuing the TensorFlow Developer Certification which is used to d
 ## Skills
 
  - Languages: Java, Python, C, Shell
- - Operating Systems: GNU/Linux, macOS, OpenBSD, Windows 7/10
+ - Operating Systems: GNU/Linux, macOS
  - Web Development: HTML, CSS, Markdown, Flask
- - Misc: vim, Final Cut Pro, GSuite, Apple iLife, Microsoft Office
+ - Project Management: Agile/Scrum, Jira
+ - Misc: vim, Final Cut Pro
 
 ## Personal
 
-- Embedded Technology
+- Embedded Technology and Alternative ISAs
+	- I've always been interested in the Electrical Engineering aspect of computers, I'm learning about RISC-V and working with SBCs
 - Niche Operating Systems
+	- Since I started using Linux in High School, I've been interested in fringe operating systems from the past and the present that dared to change the way we use computers. For Example, BeOS (Haiku) and the various Unixes.
 - Volleyball
-- Running
+	- I've been playing as a setter/libero since Spring 2021, I intend to join a rec association in College.
 - Mountain Biking
+	- I go to my local trails every so often, intend to tackle larger ones soon, GoPro footage can be found on my website soon. 
 - Literature
+	- I love reading to expose myself to new ways of thinking and explore and redefine my own thoughts as well. My favorite author is Haruki Murakami.
 - Japanese
+	- I've been learning Japanese as I intend to travel there and possibly take a study abroad program there. I've been using textbooks, online guides, native language media and talk to native speakers to learn.
