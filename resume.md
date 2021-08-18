@@ -89,7 +89,7 @@ An elegant imageboard made for the modern web, written in Flask
 
 ### <span>Robbinsville High School</span> <span>2018 - Present</span>
 
-  - GPA 4.3
+  - GPA 4.35
   - Honor Roll All Years
   - Took all Honors Classes or Higher
   - Took AP Physics, AP Calculus, and AP Computer Science
@@ -113,7 +113,5 @@ I'm currently pursuing the TensorFlow Developer Certification which is used to d
 - Volleyball
 - Running
 - Mountain Biking
-- Cars
-- Reading Literature
-- Blogging
+- Literature
 - Japanese
