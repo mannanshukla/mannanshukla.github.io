@@ -14,7 +14,6 @@
 	- Individual Branches: seperate people work on stuff and have their own branches, only merge to beta when needed
 
 - Communication
-	- Use Signal to within the software team without mentors, use Slack with mentors
 	- Bring Freshman into the "in-group", take them on walks and do stuff with them to foster good relations and better communication
 
 ## Strategy
@@ -42,8 +41,3 @@
 	- comment everything needed
 	- write readable code
 	- always push code that compiles (even to your own branch), make your own beta branch if needed
-
-- **SOFT SKILLS**
-	- **ELEVATOR PITCH**
-	- **LINE OF DIALOUGE FOR JUDGING**
-	- **HANDSHAKE FUNDAMENTALS**
