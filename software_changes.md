@@ -14,7 +14,7 @@
 	- Individual Branches: seperate people work on stuff and have their own branches, only merge to beta when needed
 
 - Communication
-	- Bring Freshman into the "in-group", take them on walks and do stuff with them to foster good relations and better communication
+	- become friends with the new members :)	 
 
 ## Strategy
 
