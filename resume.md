@@ -9,7 +9,7 @@ line. It is intended to be used for contact details -->
 
 <!-- The paragraph after the h1 and ul and before the first h2 is optional. It
 is intended to be used for a short summary. -->
-I'm an aspiring technology professional with various passion projects. I'm always excited to enhance and further my knowledge through practical experience. I'm also looking toward the future by pursuing the Google TensorFlow Developer Certification which shows proficiency with Machine Learning concepts and development. I am a capable leader with years of public speaking experience. I connect with team members and encourage everyone to speak out and incorporate their ideas.
+I'm a highly driven aspiring technology professional and enterprenuer with various passion projects. I'm always excited to enhance and further my knowledge through practical experience. I am a capable leader with years of public speaking experience. My leadership style focuses on fostering open communication between team members and utilizing everyone's unique skillset.
 
 ## Experience
 
@@ -17,7 +17,7 @@ I'm an aspiring technology professional with various passion projects. I'm alway
 hand -->
 ### <span>President and Founder/RHS Hackathon Club</span> <span>2019 - Present</span>
 
-Organization at Robbinsville High School that competes in Hackathons, competitions where participants are tasked with creating a software solution to a given problem within an allotted timeframe. Participants are then judged and awarded prizes for their creations.
+Organization at Robbinsville High School that competes in Hackathons, competitions where participants are tasked with creating a software solution to a given problem within an allotted timeframe. Participants are then judged and awarded prizes for their creations. Currently creating a hyperlocal weather forecasting platform utilizing sensor data from embedded weather stations.
 
 As President I:
 
@@ -27,22 +27,22 @@ As President I:
 - Chose leadership positions
 - Run meetings
 
-### <span>Participant/Model United Nations</span> <span>2019 - 2020</span>
+### <span>Participant/Model United Nations</span> <span>2019 - Present</span>
 
 Students are assigned a nation and are made to debate on a predetermined issue with other students. Participants are judged and awarded based on their performance.
 
 - Earned Best Delegate for Fall Mock 2019
 - Earned Invitation to SouthMUNC for Spring Mock 2020
 
-### <span>Participant/Toastmasters</span> <span>2016 - 2018</span>
+### <span>Participant/Toastmasters</span> <span>2016 - 2019</span>
 
 Toastmasters is a worldwide nonprofit organization which teaches people of various ages about public speaking.
 
-- Won 2nd for an improvisation speech
-- Was in the Advanced group from 2017-2018
+- Improvisation speech award
+- Was in the Advanced group from 2017-2019
 - Attended multiple adult competitions for observation
 
-### <span>Programmer/FIRST Robotics</span> <span>2016 - Present</span>
+### <span>Software Team, Strategy Lead/FIRST Robotics</span> <span>2016 - Present</span>
 
 FIRST (For Inspiration and Recognition of Science and Technology) is a worldwide robotics community which provides challenges to be completed by robots. I always worked with programming at each level of FIRST. I held leadership positions across my 3 teams going from middle school to high school.
 
@@ -57,12 +57,12 @@ Work:
 - Made pitches to potential sponsors
 - Gave advice to new teams during competitions
 - Wrote blogposts for the team website
+- Lead inital strategy meetings for 2021
 
 Awards:
 
 - FLL States from 2016-2018
 - FTC Programming Award in 2019
-- FRC Worlds in 2020
 
 ### <span>Volunteer/Robbinsville Hydroponics + Farmer's Market</span> <span>2021 - Present</span>
 
@@ -79,7 +79,7 @@ A worldwide effort to provide an open source oxygen concentrator, provide resour
 
 - Conducted an Interview with a prominent engineer in India
 - Conducted research on oxygen storage and concentration and shared it as part of the Engineering team
-- Working with SBCs to automate and design prototypes
+- Worked with SBCs to automate and design prototypes
 
 ## Projects
 
@@ -102,38 +102,42 @@ Simple web api for Instagram created with Python and the flask webserver
 
 An elegant imageboard made for the modern web, written in Flask
 
+### <span>rvilleforecast</span> <span>2021 - Present</span>
+
+RHS Hackathon Club project. Various embedded weather stations will be placed around Robbinsville and send their sensor data to a centralized server which will perform calculations and send it to desktop and mobile clients. An API will also be provided.
+
 ## Education
 
 ### <span>Robbinsville High School</span> <span>2018 - Present</span>
 
-  - GPA 4.35
+  - GPA 4.36
   - Honor Roll All Years
   - Took all Honors Classes or Higher
-  - Took AP Physics, AP Calculus, and AP Computer Science
+  - Took 7 AP classes including Physics, Calculus, and Computer Science
   - Took All Available Engineering and Media Classes
 
 ### <span>Google TensorFlow Developer Certification</span> <span>Present</span>
 
-I'm currently pursuing the TensorFlow Developer Certification which is used to demonstrate proficiency in using TensorFlow to solve Deep Learning and Machine Learning problems. I am expected to finish this summer.
+I'm currently pursuing the TensorFlow Developer Certification which is used to demonstrate proficiency in using TensorFlow to solve Deep Learning and Machine Learning problems.
 
 ## Skills
 
- - Languages: Java, Python, C, Shell
+ - Languages: Java, Python, Shell
  - Operating Systems: GNU/Linux, macOS
  - Web Development: HTML, CSS, Markdown, Flask
- - Project Management: Agile/Scrum, Jira
+ - Project Management: Agile, Jira
  - Misc: vim, Final Cut Pro
 
 ## Personal
 
-- Embedded Technology and Alternative ISAs
-	- I've always been interested in the Electrical Engineering aspect of computers, I'm learning about RISC-V and working with SBCs
+- Politics
+	- Spoke to various politicians in the Robbinsville and Mercer County area. Regular attentant at Robbinsivlle Board of Education and Town Council meetings. Plan to continue and work with local campaigns in the future.
+- Finance
+	- Currently part of a money pool trading stocks and crpytocurrency. I'm interested in both the decentralization of money and the various ways to build wealth.
 - Niche Operating Systems
 	- Since I started using Linux in High School, I've been interested in fringe operating systems from the past and the present that dared to change the way we use computers. For Example, BeOS (Haiku) and the various Unixes.
 - Volleyball
 	- I've been playing as a setter/libero since Spring 2021, I intend to join a rec association in College.
-- Mountain Biking
-	- I go to my local trails every so often, intend to tackle larger ones soon, GoPro footage can be found on my website soon. 
 - Literature
 	- I love reading to expose myself to new ways of thinking and explore and redefine my own thoughts as well. My favorite author is Haruki Murakami.
 - Japanese
