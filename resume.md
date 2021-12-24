@@ -26,6 +26,7 @@ As President I:
 - Created the club [website](https://rhs-hackathon-club.github.io)
 - Chose leadership positions
 - Run meetings
+- Running a Hackathon at Robbinsville High School scheduled to take place March 2022
 
 ### <span>Participant/Model United Nations</span> <span>2019 - Present</span>
 
@@ -123,7 +124,7 @@ I'm currently pursuing the TensorFlow Developer Certification which is used to d
 ## Skills
 
  - Languages: Java, Python, Shell
- - Operating Systems: GNU/Linux, macOS
+ - Operating Systems: GNU/Linux, OpenBSD, macOS
  - Web Development: HTML, CSS, Markdown, Flask
  - Project Management: Agile, Jira
  - Misc: vim, Final Cut Pro
@@ -134,10 +135,12 @@ I'm currently pursuing the TensorFlow Developer Certification which is used to d
 	- Spoke to various politicians in the Robbinsville and Mercer County area. Regular attentant at Robbinsivlle Board of Education and Town Council meetings. Plan to continue and work with local campaigns in the future.
 - Finance
 	- Currently part of a money pool trading stocks and crpytocurrency. I'm interested in both the decentralization of money and the various ways to build wealth.
+- Photography
+	- I'm on the quest to shoot the best pictures with the worst gear. My photographs can be found [here](https://mannanshukla.github.io/photography)
 - Niche Operating Systems
-	- Since I started using Linux in High School, I've been interested in fringe operating systems from the past and the present that dared to change the way we use computers. For Example, BeOS (Haiku) and the various Unixes.
+	- Since I started using Linux in High School, I've been interested in fringe operating systems from the past and the present that dared to change the way we use computers.
 - Volleyball
-	- I've been playing as a setter/libero since Spring 2021, I intend to join a rec association in College.
+	- I've been playing as a setter/libero since Spring 2021. President of the RHS Volleyball Club starting in Spring 2022. I intend to play recreationally in college.
 - Literature
 	- I love reading to expose myself to new ways of thinking and explore and redefine my own thoughts as well. My favorite author is Haruki Murakami.
 - Japanese
