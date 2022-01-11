@@ -1,5 +1,5 @@
-# Potograpy
-All of tese potos were taken wit te Panasonic DMC-ZS25
+# Photography
+All of these photos were taken with the Panasonic DMC-ZS25
 
 ## By Location
 - [Robbinsville, NJ](#robbinsville)
