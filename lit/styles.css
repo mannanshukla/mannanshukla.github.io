@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+body {
+	margin: 0;
+	background-color: #f7e8d9;
+	font-family: 'Lato', serif;
+	font-size: 20px;
+}
+
+ul.nav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #424040;
+	height: 100px;
+	font-family: 'Neonderthaw', sans-serif;
+}
+
+ul.nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  height: 100px;
+  padding-top: 36px;
+  text-decoration: underline 0.125em rgba(255, 255, 255, 0);
+  transition: text-decoration-color 300ms;
+}
+
+#title {
+  display: block;
+  color: #FFF2CD;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  padding-top: 20px;
+  margin-left: 20px;
+  font-size: 40px;
+}
+
+.r {
+	float: right;
+}
+
+.l {
+	float: left;
+}
+
+ul.nav li a:hover:not(.active) {
+	text-decoration-color: rgba(255, 255, 255, 1);
+	cursor:pointer;
+}
+
+ul.nav li a.active {
+	background-color: #04AA6D;
+}
+
+#content {
+	background-color: #f2f2f2;
+	padding: 50px;
+	margin: 20px 20%;
+	border: 10px solid darkseagreen;
+}
+
+img, audio, video {
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
