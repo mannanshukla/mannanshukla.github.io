@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');*/
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 body {
@@ -13,31 +13,39 @@ ul.nav {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: #424040;
-	height: 100px;
-	font-family: 'Neonderthaw', sans-serif;
+	background-color: #ffffff;
+	border-bottom: 5px solid white;
+	height: 90px;
+	font-family: 'Lato', sans-serif;
 }
 
 ul.nav li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 20px 16px;
   height: 100px;
   padding-top: 36px;
-  text-decoration: underline 0.125em rgba(255, 255, 255, 0);
+  color: #000000;
+  text-decoration: underline 0.1em rgba(0, 0, 0, 255);
   transition: text-decoration-color 300ms;
 }
 
 #title {
   display: block;
-  color: #FFF2CD;
+  color: #000000;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   padding-top: 20px;
   margin-left: 20px;
   font-size: 40px;
+  font-weight: bold;
+}
+
+#subtitle {
+	padding-top: 40px;
+	font-size: 20px;
 }
 
 .r {
@@ -58,10 +66,18 @@ ul.nav li a.active {
 }
 
 #content {
-	background-color: #f2f2f2;
 	padding: 50px;
-	margin: 20px 20%;
-	border: 10px solid darkseagreen;
+	padding: 20px 15%;
+	border-top: 50px solid white;
+	box-shadow: 200px 200px 200px 200px black;
+	color: #ffffff;
+	font-size: 22px;
+	line-height: 30px;
+}
+
+h1 {
+	margin: 500px 0 50px 50px;
+	font-size: 100px;
 }
 
 img, audio, video {
