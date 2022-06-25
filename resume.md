@@ -140,7 +140,7 @@ I'm currently pursuing the TensorFlow Developer Certification which is used to d
 - Niche Operating Systems
 	- Since I started using Linux in High School, I've been interested in fringe operating systems from the past and the present that dared to change the way we use computers.
 - Volleyball
-	- I've been playing as a setter/libero since Spring 2021. President of the RHS Volleyball Club starting in Spring 2022. I intend to play recreationally in college.
+	- I've been playing with friends since Spring 2021. I intend to play recreationally in college.
 - Literature
 	- I love reading to expose myself to new ways of thinking and explore and redefine my own thoughts as well. My favorite author is Haruki Murakami.
 - Japanese
