@@ -133,8 +133,6 @@ I'm currently pursuing the TensorFlow Developer Certification which is used to d
 
 - Politics
 	- Spoke to various politicians in the Robbinsville and Mercer County area. Regular attentant at Robbinsivlle Board of Education and Town Council meetings. Plan to continue and work with local campaigns in the future.
-- Finance
-	- Currently part of a money pool trading stocks and crpytocurrency. I'm interested in both the decentralization of money and the various ways to build wealth.
 - Photography
 	- I'm on the quest to shoot the best pictures with the worst gear. My photographs can be found [here](https://mannanshukla.github.io/photography)
 - Niche Operating Systems
