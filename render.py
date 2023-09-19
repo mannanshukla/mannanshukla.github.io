@@ -2,7 +2,7 @@ import markdown2
 import os
 import chevron
 
-directory=r'.'
+directory=r'.' 
 for entry in os.scandir(directory):
         if(entry.path.endswith(".md") and entry.path[2:] != "resume.md" and entry.path[2:] != "README.md"):
             filename = entry.path[2:]
