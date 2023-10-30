@@ -1,0 +1,237 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+\usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Mannan Shukla} \\ \vspace{3pt}
+    \normalsize Robbinsville, NJ \\
+    \small (609) 575-0436 $|$ \href{mailto:mannanshukla@icloud.com}{{mannanshukla@icloud.com}} $|$ 
+    \href{https://linkedin.com/in/mannanshukla}{{linkedin.com/in/mannanshukla}} $|$
+    \href{https://github.com/mannanshukla}{{github.com/mannanshukla}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Rutgers University - New Brunswick}{GPA - 3.5}
+      {Bachelor of Science - Computer Science}{Expected May 2026}
+      \begin{itemize}
+	      \item Data Structures and Algorithms, Computer Architecture, Discrete Mathematics, Linear Algebra
+	      \item RUSLUG, RU Security Club, Photography Club, Sailing Team, Design for America (DFA), IDEA 
+	\end{itemize}
+  \resumeSubHeadingListEnd
+
+
+ 
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+    \resumeSubheading
+      {Research Assistant}{October 2023 - Present}
+      {Rutgers University Rail and Transit Program}{New Brunswick, NJ}
+      \resumeItemListStart
+        \resumeItem{Working under Dr. Xiang Liu researching how autonomous vehicles can safely pass railroad crossings without warning devices.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Marketing and IT Director}{July 2023 - Present}
+      {American Louvered Roof}{Trenton, NJ}
+      \resumeItemListStart
+        \resumeItem{Designed and developed web presence using Bootstrap deployed on Google Firebase (https://americanlouveredroof.com)}
+        \resumeItem{Manage all company servers, domains, email addresses, VoIP, and digital accounting overseeing thousands of dollars}
+        \resumeItem{Formalized next-generation regional marketing strategy using social media plus traditional face to face techniques}
+        \resumeItem{Fostered relationship with 3 major clients resulting in current sales over \$30,000}
+    \resumeItemListEnd
+
+
+
+    \resumeSubheading
+      {Student Design Researcher}{June 2023}
+      {Innovation, Design, and Enterprenuership Academy at Rutgers}{New Brunswick, NJ}
+      \resumeItemListStart
+        \resumeItem{Developed Full Stack Volunteer Management System for non-profits with team of 5 design researchers in a 5 week program at Rutgers University}
+        \resumeItem{Located, Interviewed, and Consulted 5 key stakeholders from the Mercer and Middlesex County area}
+	\resumeItem{Presented finalized project and process to stakeholders, program directors, Deans at Rutgers, and the greater university community}
+	\resumeItem{Secured contract to deploy for Robbinsville Hydroponic Farm at the conclusion of the project}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Leadership}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {President}{September 2023 - Present}
+      {Rutgers University Student Linux User's Group (RUSLUG)}{New Brunswick, NJ}
+      \resumeItemListStart
+        \resumeItem{Relaunced club following 12 year gap, developed constitution and recruited 20 members}
+        \resumeItem{Responsible for all recordkeeping and communications with Rutgers CS and Involvement Departments}
+        \resumeItem{Hosting installfests, keysharing events, howto presentations, lan parties, and discussions}
+        \resumeItem{Launched and maintained all community outreach and Linux servers for website, games, and libre services}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{zipgig} $|$ \emph{Python, FastAPI, Bootstrap, MongoDB}}{2023}
+          \resumeItemListStart
+            \resumeItem{Created a full-stack web application to help users find one day jobs and gigs}
+            \resumeItem{Utilized Bootstrap and Jinja templating to create a dynamic and approachable frontend}
+            \resumeItem{Implemented FastAPI and python to implement a simple yet powerful REST API for backend} 
+            \resumeItem{Incorporated MongoDB database for efficient querying to eliminate wait times for all users and post data}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{headcount} $|$ \emph{Python, FastAPI, React, MongoDB, pypdf, Google Sheets API, git}}{2023}
+          \resumeItemListStart
+            \resumeItem{Developed a full-stack web application for volunteer management using FastAPI serving a REST API with a React frontend}
+            \resumeItem{Implemented pypdf to make writing forms easier and to fully automate recordkeeping, saving hours of searching}
+            \resumeItem{Integrated Google Sheets API to automaticially generate spreadsheets containing user data and records for easy submission}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{clapmaster} $|$ \emph{Python, Raspberry Pi, OpenCV}}{2023}
+          \resumeItemListStart
+            \resumeItem{Designed rhythm game for Raspberry Pi - a motor generates a randomly generated vibration beat, users must repeat the beat with claps}
+            \resumeItem{Utilized computer vision to detect hand placement and claps}
+            \resumeItem{Created algorithm to generate beat patterns with increasing difficulty} 
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-------------------------------------------
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Java, Python, C, JavaScript, HTML/CSS} \\
+     \textbf{Frameworks}{: React, Node.js, FastAPI, Flask, Bootstrap, MongoDB, tensorflow, pandas} \\
+     \textbf{Developer Tools}{: Git, Docker, Linux, AWS, Firebase, vim} \\
+     \textbf{Certifications}{: AWS Cloud Practitioner - In Progress, ISC2 CCSP (Certified Cloud Security Professional) - In Progress}
+    }}
+
+ \end{itemize}
+
+\end{document}
