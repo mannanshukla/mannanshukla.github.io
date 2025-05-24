@@ -3,7 +3,7 @@
 % Updated 2025-05-24 (layout tweaks; research merged into experience; project headings revised)
 %-------------------------
 
-\documentclass[letterpaper,8pt]{article}
+\documentclass[letterpaper,11pt]{article}
 
 % --- PACKAGES & LAYOUT ------------------------------------------------------
 \usepackage[margin=0.55in]{geometry}
@@ -42,13 +42,13 @@
 \newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
 
 \newcommand{\resumeSubheading}[4]{\vspace{-2pt}\item
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
     \textit{\small #3} & \textit{\small #4} \\
   \end{tabular*}\vspace{-7pt}}
 
 \newcommand{\resumeProjectHeading}[2]{\item
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
     \small #1 & #2 \\
   \end{tabular*}\vspace{-7pt}}
 
@@ -71,52 +71,45 @@
   \href{https://github.com/mannanshukla}{github.com/mannanshukla}
 \end{center}
 
-% ---------- TECHNICAL SKILLS ------------------------------------------------
-\section{Technical Skills}
-\begin{itemize}[leftmargin=0in,label={}]
-  \item javascript, python, java, c, sql, nextjs, react, node, mongodb, pytorch, springboot, fastapi, ollama, whisper, unsloth, openai api, huggingface, yolov8, docker, kubernetes, aws solution architecture, linux system administration, nix, git
-\end{itemize}
+% ---------- EDUCATION -------------------------------------------------------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Rutgers University - New Brunswick}{}{Bachelor of Science - Computer Science • Cum Laude}{}
+    \resumeItemListStart
+      \resumeItem{Student Linux User Group (President), Road to Silicon Valley Program, TA 33:382:340, Cybersecurity Club, Photography Club}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
 
 % ---------- EXPERIENCE ------------------------------------------------------
 \section{Experience}
 \resumeSubHeadingListStart
 
   \resumeSubheading
-    {Partnerships Intern}{Feb 2025 - May 2025}{nas.io}{New York, NY}
+    {Partnerships Intern}{Feb 2025 - May 2025}{Nas.io}{New York, NY}
     \resumeItemListStart
       \resumeItem{Reached thousands of fitness and finance influencers through targeted outreach campaigns for Series A Startup}
-      \resumeItem{50x'd influencer identification efficiency by building automated pipeline with Python, Klaviyo, Google Sheets, and Influencity for email drip campaigns and personalized DMs}
-      \resumeItem{Gained direct sales experience through taking and shadowing client warm and cold calls}
+      \resumeItem{50x'd influencer identification efficiency by building automated pipeline with \textbf{Python}, \textbf{Klaviyo}, and \textbf{Influencity} for emails}
+      \resumeItem{Developed internal tool using \textbf{toutatis} and \textbf{Tailwind} that 2x'd weekly identification output for other interns}
+      \resumeItem{Led and shadowed high-stakes client calls, including cold outreach and warm lead follow-ups}
       \resumeItem{Generated \$2K in GMV in 1 month by successfully onboarding 5 major clients onto the platform}
-    \resumeItemListEnd
-
-  \resumeSubheading
-    {Teaching Assistant}{Jan 2025 - May 2025}{Rutgers University}{New Brunswick, NJ}
-    \resumeItemListStart
-      \resumeItem{TA for 33:382:340 - Innovation, Creativity, and Entrepreneurship under Professor Mukesh Patel}
-      \resumeItem{Automated grade management through Canvas integration, Qwickly attendance tracking, and Google Sheets automations}
     \resumeItemListEnd
 
   % --- Former research now listed as experience ---
   \resumeSubheading
     {Independent Researcher — SuperAgent}{Apr 2024 - Dec 2024}{Rutgers University}{New Brunswick, NJ}
     \resumeItemListStart
-      \resumeItem{Independent Research under Prof. Yongfeng Zhang developing novel agent recommendation system for LLM-based operating systems}
-      \resumeItem{Achieved 83\% accuracy compared to GPT-4 ground truth using 1B parameter model, approaching 86\% accuracy of 8B model}
-      \resumeItem{Employed transfer learning through LoRA fine-tuning via Unlsloth for small local parameters to approach GPT-4 performance}
+      \resumeItem{Independent Research under Prof. Yongfeng Zhang developing novel agent recommendation system for \textbf{LLM}-based OS}
+      \resumeItem{Achieved 83\% accuracy compared to \textbf{GPT-4} ground truth using 1B parameter model, approaching 86\% accuracy of 8B model}
+      \resumeItem{Employed transfer learning through \textbf{LoRA} fine-tuning via \textbf{Unlsloth} for small local parameters to approach \textbf{GPT-4} performance}
     \resumeItemListEnd
 
   \resumeSubheading
-    {Web Developer}{June 2023 - July 2023}{American Louvered Roof}{Trenton, NJ}
+    {Chief Technology Officer}{Dec 2021 - Present}{Hridyam Inc}{Princeton, NJ}
     \resumeItemListStart
-      \resumeItem{Generated 10 new client contracts by establishing and managing company's digital presence}
-      \resumeItem{Developed responsive company website using Bootstrap, improving online visibility and lead generation}
-    \resumeItemListEnd
-
-  \resumeSubheading
-    {Student Design Researcher}{May 2023 - June 2023}{IDEA Rutgers}{New Brunswick, NJ}
-    \resumeItemListStart
-      \resumeItem{Built a Bootstrap volunteer intake portal that programmatically generates print-ready forms with PyPDF, replacing paper}
+      \resumeItem{Led development of HIPAA-compliant telehealth platform using \textbf{AWS} services including \textbf{ECS}, \textbf{RDS}, \textbf{S3}, and \textbf{CloudFront}}
+      \resumeItem{Implemented robust IAM policies and encryption protocols following healthcare security best practices}
+      \resumeItem{Provided digital transformation consulting to 5+ healthcare clients, modernizing legacy systems with cloud-native solutions}
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -127,44 +120,43 @@
 
   \resumeProjectHeading{\textbf{tochi.one} — Full-stack AI property management platform}{Mar 2025 - Present}
     \resumeItemListStart
-      \resumeItem{Engineered tenant risk assessment system using PyTorch logistic regression for data-driven screening}
-      \resumeItem{Automated maintenance ticket generation and classification using Twilio and Gemini API integration}
-      \resumeItem{Built modern, responsive interface using Next.js and shadcn/ui, deployed on Vercel infrastructure}
+      \resumeItem{Reduced tenant defaults by 25\% through \textbf{PyTorch} logistic regression risk assessment system for data-driven screening}
+      \resumeItem{Saved clients 10hr of manual processing time per month by automating maintenance ticket creation with \textbf{Twilio} and \textbf{Gemini}}
+      \resumeItem{Built modern, responsive interface using \textbf{Next.js} and \textbf{shadcn/ui}, deployed on \textbf{Vercel} infrastructure}
       \resumeItem{Drove product adoption through continuous stakeholder engagement at local real estate networking events}
     \resumeItemListEnd
 
-  \resumeProjectHeading{\textbf{AdBlockIRL} — AR ad-blocking proof-of-concept for Meta Quest}{May 2025}
+  \resumeProjectHeading{\textbf{AdBlockIRL} — AR ad-blocking proof-of-concept for \textbf{Meta Quest}}{May 2025}
     \resumeItemListStart
-      \resumeItem{Trained YOLOv8 model on Roboflow to achieve real-time advertisement detection in video streams}
-      \resumeItem{Implemented live video manipulation using OpenCV to apply mosaic censoring effect on detected advertisements}
-      \resumeItem{Won \$2000 in prizes at Bain Capital Ventures AI Hackathon in NYC}
+      \resumeItem{Trained \textbf{YOLOv8} model on \textbf{Roboflow} achieving 5ms latency detection of 100+ concurrent advertisements in video streams}
+      \resumeItem{Implemented live video manipulation using \textbf{OpenCV} to apply mosaic censoring effect on detected advertisements}
+      \resumeItem{Won \$2000 in prizes at Bain Capital Ventures AI Hackathon in NYC (FLORA track winner, Pond prize winner)}
     \resumeItemListEnd
 
   \resumeProjectHeading{\textbf{SlopGen} — Automated "fun facts" short-form video generator}{June 2024 - Sep 2024}
     \resumeItemListStart
-      \resumeItem{Engineered content retrieval system using yt-dlp for programmatic video downloading and WhisperX for accurate transcription}
-      \resumeItem{Implemented sentence segment classification using llama3 via ollama with RLHF}
-      \resumeItem{Developed voice endpoint with Edge-TTS and Retrival Voice Changer to replicate ElevenLabs functionality}
+      \resumeItem{Engineered content retrieval system using \textbf{yt-dlp} for programmatic downloads and \textbf{WhisperX} for accurate transcription}
+      \resumeItem{Achieved 92\% accuracy in content segmentation using \textbf{llama3} via \textbf{ollama} with RLHF, 15x faster than manual classification}
+      \resumeItem{Developed voice endpoint with \textbf{edge-tts} and \textbf{Retrival Voice Changer} to for custom tts voices (your own or from recordings)}
     \resumeItemListEnd
 
-\resumeSubHeadingListEnd
-
-% ---------- EDUCATION -------------------------------------------------------
-\section{Education}
-\resumeSubHeadingListStart
-  \resumeSubheading
-    {Rutgers University - New Brunswick}{May 2025}{Bachelor of Science - Computer Science • GPA: 3.5}{}
-    \resumeItemListStart
-      \resumeItem{Student Linux User Group (President), Road to Silicon Valley Program, Cybersecurity Club, Photography Club}
-    \resumeItemListEnd
 \resumeSubHeadingListEnd
 
 % ---------- AWARDS ----------------------------------------------------------
 \section{Awards}
-\begin{itemize}[leftmargin=0.10in]
-  \item BCV AI for Work and Life Hackathon: Best Viral Internet Product
-  \item Rutgers IDEA Discovery Fund recipient for tochi.one
-  \item HackRU Fall 24: Best Use of DataBricks
+\resumeSubHeadingListStart
+\item
+\resumeItemListStart
+    \resumeItem{BCV AI for Work and Life Hackathon: Best Viral Internet Product}
+    \resumeItem{Rutgers IDEA Discovery Fund recipient for tochi.one}
+    \resumeItem{HackRU Fall 24: Best Use of DataBricks}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+% ---------- TECHNICAL SKILLS ------------------------------------------------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0in,label={}]
+  \item JavaScript, TypeScript, Python, Java, C, SQL, Next.js, React, Node, MongoDB, Redis, Supabase, PostgreSQL, PyTorch, Spring Boot, FastAPI, LangChain, Whisper, Unsloth, Hugging Face, YOLOv8, Docker, Kubernetes, AWS Solution Architecture, Nginx, Linux sysadmin, Nix, Git, Bootstrap, Twilio, Vercel, OpenCV
 \end{itemize}
 
 \end{document}
