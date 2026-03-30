@@ -1,0 +1,136 @@
+%-------------------------
+% Résumé — Mannan Shukla
+% Updated 2025-05-24 (layout tweaks; research merged into experience; project headings revised)
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+% --- PACKAGES & LAYOUT ------------------------------------------------------
+\usepackage[margin=0.55in]{geometry}
+\usepackage{latexsym}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\usepackage[default]{sourcesanspro}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\setlist[itemize]{leftmargin=0.10in}   % tighter bullet indent
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\pdfgentounicode=1
+
+\titleformat{\section}{
+  \vspace{-3pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+% --- CUSTOM COMMANDS --------------------------------------------------------
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+
+\newcommand{\resumeSubheading}[4]{\vspace{-2pt}\item
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}}
+
+\newcommand{\resumeProjectHeading}[2]{\item
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \small #1 & #2 \\
+  \end{tabular*}\vspace{-7pt}}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in,label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.10in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%=============================================================================
+%                               DOCUMENT
+%=============================================================================
+\begin{document}
+\fontsize{11.5pt}{14pt}\selectfont
+
+% ---------- NAME ------------------------------------------------------------
+\begin{center}
+  \textbf{\Huge \scshape Mannan Shukla} \\[3pt]
+  Tri-State Area / Bay Area • US Citizen \\[3pt]
+  \small (609) 575-0436 \;•\; \href{mailto:mannanshukla@icloud.com}{mannanshukla@icloud.com} \;•\;
+  \href{https://linkedin.com/in/mannanshukla}{linkedin.com/in/mannanshukla} \;•\;
+  \href{https://github.com/mannanshukla}{github.com/mannanshukla}
+\end{center}
+
+% ---------- TECHNICAL SKILLS ------------------------------------------------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0in,label={}]
+  \item CUDA, Slurm, DCGM, nvidia-smi, NCCL \;•\; Kubernetes, Docker, Helm, ArgoCD, Terraform \;•\; Go, Python, Bash, JavaScript, TypeScript \;•\; AWS (EC2, ECS, RDS, S3, DynamoDB, CloudWatch, IAM, SNS) \;•\; Prometheus, Grafana \;•\; PyTorch, Hugging Face, LangChain \;•\; Auth0, JWT, OAuth, RBAC, GitHub Actions
+\end{itemize}
+
+% ---------- EXPERIENCE ------------------------------------------------------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Software Engineer}{July 2025 - Present}{Voltage Park / Lightning AI}{Redmond, WA}
+    \resumeItemListStart
+      \resumeItem{Collaborated with senior engineers on architecture and design of the \textbf{VP Cloud} platform; contributed to \textbf{DynamoDB} data model design for fleet and node management with composite keys, org-scoped GSIs, and event-sourced history tables}
+      \resumeItem{Designed and implemented a \textbf{P2C} load balancer for the storage control plane, improving request distribution across backend instances — involved in both the system design and production rollout}
+      \resumeItem{Built the \textbf{VP Cloud Python SDK} end-to-end: \textbf{OpenAPI} code generation pipeline, \textbf{Auth0} M2M authentication with datacenter-aware token exchange, and automated CI/CD publish workflows via \textbf{GitHub Actions}}
+      \resumeItem{Integrated \textbf{Auth0} into the VP Cloud auth flow with the internal \textbf{IAM} service, implementing JWT validation, RBAC, and org-scoped multi-tenant access control}
+      \resumeItem{Served as on-call engineer for production \textbf{H100} clusters; debugged \textbf{WireGuard} VPN, \textbf{CoreDNS}, \textbf{MPI Operator}, and \textbf{GPU Operator} issues across \textbf{Kubernetes} environments; set up \textbf{Prometheus} and \textbf{Grafana} monitoring for fleet observability}
+      \resumeItem{Built \textbf{Slurm} prolog/epilog GPU health check suite (ECC, PCIe AER, NCCL stalls, tiered thermal protection) with automatic node draining across client clusters including Reflection AI}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Independent Researcher — SuperAgent}{Apr 2024 - Dec 2024}{Rutgers University}{New Brunswick, NJ}
+    \resumeItemListStart
+      \resumeItem{Built \textbf{LLM}-based agent recommendation system under Prof. Yongfeng Zhang; achieved 83\% accuracy vs. \textbf{GPT-4} ground truth using a 1B model via \textbf{LoRA} fine-tuning with \textbf{Unsloth}}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Partnerships + Business Development}{Feb 2025 - May 2025}{Nas.io}{New York, NY}
+    \resumeItemListStart
+      \resumeItem{Drove influencer partnerships and client onboarding for a Series A startup, generating \$2K GMV in one month while 50x'ing outreach efficiency via a \textbf{Python}/\textbf{Klaviyo} automation pipeline}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% ---------- PROJECTS --------------------------------------------------------
+\section{Projects}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading{\textbf{AdBlockIRL} — AR ad-blocking proof-of-concept for \textbf{Meta Quest}}{May 2025}
+    \resumeItemListStart
+      \resumeItem{Trained \textbf{YOLOv8} on \textbf{Roboflow} to detect 100+ concurrent ads at 5ms latency, applying real-time mosaic censoring via \textbf{OpenCV}; won \$2000 at Bain Capital Ventures AI Hackathon}
+    \resumeItemListEnd
+
+  \resumeProjectHeading{\textbf{SlopGen} — Automated short-form video generator}{June 2024 - Sep 2024}
+    \resumeItemListStart
+      \resumeItem{Built end-to-end pipeline using \textbf{yt-dlp}, \textbf{WhisperX}, and \textbf{llama3} via \textbf{ollama} achieving 92\% segmentation accuracy (15x faster than manual), with custom TTS voices via \textbf{edge-tts}}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% ---------- EDUCATION -------------------------------------------------------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Rutgers University - New Brunswick}{}{Bachelor of Science - Computer Science • Cum Laude}{}
+    \resumeItemListStart
+      {\scriptsize\item Linux User Group (President), Road to Silicon Valley Program}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}
