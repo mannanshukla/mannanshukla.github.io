@@ -66,7 +66,7 @@
 % ---------- NAME ------------------------------------------------------------
 \begin{center}
   \textbf{\Huge \scshape Mannan Shukla} \\[3pt]
-  Tri-State Area / Bay Area • US Citizen \\[3pt]
+  Sunnyvale, California • US Citizen \\[3pt]
   \small (609) 575-0436 \;•\; \href{mailto:mannanshukla@icloud.com}{mannanshukla@icloud.com} \;•\;
   \href{https://linkedin.com/in/mannanshukla}{linkedin.com/in/mannanshukla} \;•\;
   \href{https://github.com/mannanshukla}{github.com/mannanshukla}
@@ -75,7 +75,7 @@
 % ---------- TECHNICAL SKILLS ------------------------------------------------
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0in,label={}]
-  \item CUDA, Slurm, DCGM, nvidia-smi, NCCL \;•\; Kubernetes, Docker, Helm, ArgoCD, Terraform \;•\; Go, Python, Bash, JavaScript, TypeScript \;•\; AWS (EC2, ECS, RDS, S3, DynamoDB, CloudWatch, IAM, SNS) \;•\; Prometheus, Grafana \;•\; PyTorch, Hugging Face, LangChain \;•\; Auth0, JWT, OAuth, RBAC, GitHub Actions
+  \item Kubernetes (operators, controllers, CRDs), Docker, Helm, ArgoCD, Terraform, Cilium \;•\; Go, Python, Bash, JavaScript, TypeScript \;•\; vLLM, SGLang, TensorRT-LLM, Triton Inference Server, continuous batching, PagedAttention/KV cache, FP8/INT8 quantization, speculative decoding \;•\; CUDA, Slurm, DCGM, nvidia-smi, NCCL \;•\; PyTorch, Hugging Face, LoRA, LangChain \;•\; AWS (EC2, ECS, RDS, S3, DynamoDB, CloudWatch, IAM, SNS) \;•\; Prometheus, Grafana \;•\; GitOps, CI/CD, GitHub Actions \;•\; Auth0, JWT, OAuth, RBAC
 \end{itemize}
 
 % ---------- EXPERIENCE ------------------------------------------------------
@@ -85,16 +85,17 @@
   \resumeSubheading
     {Software Engineer}{July 2025 - Present}{Voltage Park / Lightning AI}{Redmond, WA}
     \resumeItemListStart
-      \resumeItem{Collaborated with senior engineers on architecture and design of the \textbf{VP Cloud} platform; contributed to \textbf{DynamoDB} data model design for fleet and node management with composite keys, org-scoped GSIs, and event-sourced history tables}
-      \resumeItem{Designed and implemented a \textbf{P2C} load balancer for the storage control plane, improving request distribution across backend instances — involved in both the system design and production rollout}
-      \resumeItem{Built the \textbf{VP Cloud Python SDK} end-to-end: \textbf{OpenAPI} code generation pipeline, \textbf{Auth0} M2M authentication with datacenter-aware token exchange, and automated CI/CD publish workflows via \textbf{GitHub Actions}}
-      \resumeItem{Integrated \textbf{Auth0} into the VP Cloud auth flow with the internal \textbf{IAM} service, implementing JWT validation, RBAC, and org-scoped multi-tenant access control}
-      \resumeItem{Served as on-call engineer for production \textbf{H100} clusters; debugged \textbf{WireGuard} VPN, \textbf{CoreDNS}, \textbf{MPI Operator}, and \textbf{GPU Operator} issues across \textbf{Kubernetes} environments; set up \textbf{Prometheus} and \textbf{Grafana} monitoring for fleet observability}
-      \resumeItem{Built \textbf{Slurm} prolog/epilog GPU health check suite (ECC, PCIe AER, NCCL stalls, tiered thermal protection) with automatic node draining across client clusters including Reflection AI}
+      \resumeItem{Built \textbf{VP Cloud} platform features in \textbf{Go}, including \textbf{Kubernetes} controllers for fleet/node lifecycle backed by an event-sourced \textbf{DynamoDB} model (composite keys, org-scoped GSIs)}
+      \resumeItem{Designed hot weight reloading for \textbf{BYOM} \textbf{vLLM} deployments: a \textbf{Go} sidecar calling vLLM's \texttt{reload\_weights}/sleep-mode APIs to swap fine-tuned checkpoints in-place in seconds, eliminating 10--30 min GPU redeploys}
+      \resumeItem{Designed and shipped a \textbf{P2C} load balancer for the distributed storage control plane, improving request distribution across backend instances}
+      \resumeItem{Built \textbf{GitOps} delivery (\textbf{ArgoCD}) and infrastructure-as-code (\textbf{Terraform}, \textbf{Helm}) to provision multi-tenant \textbf{Kubernetes} clusters, with CI/CD via \textbf{GitHub Actions}}
+      \resumeItem{Maintain a multi-tenant managed \textbf{Kubernetes} platform, reviewing PRs across \textbf{Cilium}/\textbf{Envoy} networking, \textbf{NVIDIA GPU Operator} health checks, \textbf{kube-prometheus-stack} observability, and tenant-isolation hardening}
+      \resumeItem{On-call for production \textbf{H100} \textbf{Kubernetes} clusters; debugged container networking (\textbf{WireGuard}, \textbf{CoreDNS}, \textbf{Cilium}), \textbf{MPI Operator}, and \textbf{GPU Operator} issues}
+      \resumeItem{Built \textbf{Prometheus}/\textbf{Grafana} fleet observability and a \textbf{Slurm} prolog/epilog GPU health-check suite (ECC, PCIe AER, NCCL stalls, thermal) with automatic node draining}
     \resumeItemListEnd
 
   \resumeSubheading
-    {Independent Researcher — SuperAgent}{Apr 2024 - Apr 2025}{Rutgers University}{New Brunswick, NJ}
+    {Independent Researcher: SuperAgent}{Apr 2024 - Apr 2025}{Rutgers University}{New Brunswick, NJ}
     \resumeItemListStart
       \resumeItem{Built \textbf{LLM}-based agent recommendation system under Prof. Yongfeng Zhang; achieved 83\% accuracy vs. \textbf{GPT-4} ground truth using a 1B model via \textbf{LoRA} fine-tuning with \textbf{Unsloth}}
     \resumeItemListEnd
@@ -111,12 +112,17 @@
 \section{Projects}
 \resumeSubHeadingListStart
 
-  \resumeProjectHeading{\textbf{AdBlockIRL} — AR ad-blocking proof-of-concept for \textbf{Meta Quest}}{May 2025}
+  \resumeProjectHeading{\textbf{BYOA}: Bring Your Own Agent}{May 2026}
+    \resumeItemListStart
+      \resumeItem{Built a \textbf{Kubernetes} platform that spins up agents on any \textbf{HuggingFace} model in one click, leveraging \textbf{NVIDIA Dynamo} for disaggregated prefill/decode serving, KV-cache-aware routing, and GPU autoscaling behind OpenAI-compatible endpoints}
+    \resumeItemListEnd
+
+  \resumeProjectHeading{\textbf{AdBlockIRL}: AR ad-blocking proof-of-concept for \textbf{Meta Quest}}{May 2025}
     \resumeItemListStart
       \resumeItem{Trained \textbf{YOLOv8} on \textbf{Roboflow} to detect 100+ concurrent ads at 5ms latency, applying real-time mosaic censoring via \textbf{OpenCV}; won \$2000 at Bain Capital Ventures AI Hackathon}
     \resumeItemListEnd
 
-  \resumeProjectHeading{\textbf{SlopGen} — Automated short-form video generator}{June 2024 - Sep 2024}
+  \resumeProjectHeading{\textbf{SlopGen}: Automated short-form video generator}{June 2024 - Sep 2024}
     \resumeItemListStart
       \resumeItem{Built end-to-end pipeline using \textbf{yt-dlp}, \textbf{WhisperX}, and \textbf{llama3} via \textbf{ollama} achieving 92\% segmentation accuracy (15x faster than manual), with custom TTS voices via \textbf{edge-tts}}
     \resumeItemListEnd
