@@ -39,7 +39,7 @@
 }{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
 
 % --- CUSTOM COMMANDS --------------------------------------------------------
-\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-3.5pt}}}}
 
 \newcommand{\resumeSubheading}[4]{\vspace{-2pt}\item
   \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -75,7 +75,7 @@
 % ---------- TECHNICAL SKILLS ------------------------------------------------
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0in,label={}]
-  \item {\small Kubernetes (operators, controllers, CRDs), Docker, Helm, ArgoCD, Terraform, Cilium \;•\; Go, Python, Bash, JavaScript, TypeScript \;•\; vLLM, SGLang, TensorRT-LLM, Triton Inference Server, continuous batching, PagedAttention/KV cache, FP8/INT8 quantization, speculative decoding \;•\; CUDA, Slurm, DCGM, nvidia-smi, NCCL \;•\; PyTorch, Hugging Face, LoRA, LangChain \;•\; AWS (EC2, ECS, RDS, S3, DynamoDB, CloudWatch, IAM, SNS) \;•\; Prometheus, Grafana \;•\; GitOps, CI/CD, GitHub Actions \;•\; Auth0, JWT, OAuth, RBAC}
+  \item {\small Kubernetes (operators, controllers, CRDs), Docker, Helm, ArgoCD, Terraform, Cilium \;•\; Go, Python, Bash, TypeScript \;•\; vLLM, continuous batching, PagedAttention/KV cache, CUDA, Slurm, DCGM, NCCL \;•\; PyTorch, Hugging Face, LoRA \;•\; AWS (EC2, ECS, RDS, S3, DynamoDB, IAM) \;•\; Prometheus, Grafana \;•\; GitOps, CI/CD, GitHub Actions \;•\; Auth0, JWT, RBAC}
 \end{itemize}
 
 % ---------- EXPERIENCE ------------------------------------------------------
@@ -83,27 +83,27 @@
 \resumeSubHeadingListStart
 
   \resumeSubheading
-    {Software Engineer}{July 2025 - Present}{Voltage Park / Lightning AI}{Redmond, WA}
+    {Software Engineer}{July 2025 - Present}{Voltage Park / Lightning AI}{San Francisco, CA \& Redmond, WA}
     \resumeItemListStart
-      \resumeItem{Built \textbf{VP Cloud} platform features in \textbf{Go}, including \textbf{Kubernetes} controllers for fleet/node lifecycle backed by an event-sourced \textbf{DynamoDB} model (composite keys, org-scoped GSIs)}
-      \resumeItem{Designed hot weight reloading for \textbf{BYOM} \textbf{vLLM} deployments: a \textbf{Go} sidecar calling vLLM's \texttt{reload\_weights}/sleep-mode APIs to swap fine-tuned checkpoints in-place in seconds, eliminating 10--30 min GPU redeploys}
-      \resumeItem{Designed and shipped a \textbf{P2C} load balancer for the distributed storage control plane, improving request distribution across backend instances}
-      \resumeItem{Built \textbf{GitOps} delivery (\textbf{ArgoCD}) and infrastructure-as-code (\textbf{Terraform}, \textbf{Helm}) to provision multi-tenant \textbf{Kubernetes} clusters, with CI/CD via \textbf{GitHub Actions}}
-      \resumeItem{Maintain a multi-tenant managed \textbf{Kubernetes} platform, reviewing PRs across \textbf{Cilium}/\textbf{Envoy} networking, \textbf{NVIDIA GPU Operator} health checks, \textbf{kube-prometheus-stack} observability, and tenant-isolation hardening}
-      \resumeItem{On-call for production \textbf{H100} \textbf{Kubernetes} clusters; debugged container networking (\textbf{WireGuard}, \textbf{CoreDNS}, \textbf{Cilium}), \textbf{MPI Operator}, and \textbf{GPU Operator} issues}
-      \resumeItem{Built \textbf{Prometheus}/\textbf{Grafana} fleet observability and a \textbf{Slurm} prolog/epilog GPU health-check suite (ECC, PCIe AER, NCCL stalls, thermal) with automatic node draining}
+      \resumeItem{Shipped hot model-weight reloading for \textbf{vLLM} deployments via a \textbf{Go} sidecar, swapping fine-tuned checkpoints in-place in seconds vs.\ 10--30 min GPU redeploys}
+      \resumeItem{Designed an async/batch inference platform: a durable \textbf{Postgres}-backed task queue (\texttt{SKIP LOCKED} claims, leases) with pull-based sidecar workers and queue-depth autoscaling (scale-to-zero)}
+      \resumeItem{Built core pieces of an \textbf{S3}-compatible object store (\textbf{VAST}-backed): a health-aware \textbf{P2C} client-side load balancer over CNode IPs with lock-free in-flight tracking and automatic failover, plus \textbf{Terraform}/\textbf{Vault}-managed \textbf{RDS} infra}
+      \resumeItem{Built distributed inference orchestration on \textbf{Kubernetes} in \textbf{Go}: deployment-target controllers and \textbf{DynamoDB} event sourcing to coordinate fleets of \textbf{GPU} serving replicas}
+      \resumeItem{Built and operate a multi-tenant managed \textbf{Kubernetes} platform across \textbf{GitOps} (\textbf{ArgoCD}), \textbf{Terraform}/\textbf{Helm} IaC, \textbf{Cilium}/\textbf{Envoy} networking, \textbf{NVIDIA GPU Operator}, and \textbf{kube-prometheus-stack} observability, with tenant-isolation hardening}
+      \resumeItem{Built a \textbf{Slurm} GPU health-check suite for distributed training (ECC, PCIe AER, \textbf{NCCL} stalls, \textbf{DCGM} checks, thermal) that auto-drains unhealthy nodes to protect multi-node jobs}
+      \resumeItem{On-call for production \textbf{H100} clusters; debugged distributed networking/scheduling across \textbf{WireGuard}, \textbf{CoreDNS}, \textbf{Cilium}, \textbf{MPI Operator}, and \textbf{GPU Operator}}
     \resumeItemListEnd
 
   \resumeSubheading
-    {Independent Researcher: SuperAgent}{Apr 2024 - Apr 2025}{Rutgers University}{New Brunswick, NJ}
+    {Undergraduate Researcher: SuperAgent}{Apr 2024 - Apr 2025}{Rutgers University}{New Brunswick, NJ}
     \resumeItemListStart
-      \resumeItem{Built \textbf{LLM}-based agent recommendation system under Prof. Yongfeng Zhang; achieved 83\% accuracy vs. \textbf{GPT-4} ground truth using a 1B model via \textbf{LoRA} fine-tuning with \textbf{Unsloth}}
+      \resumeItem{Built an \textbf{LLM} agent recommendation system hitting 83\% accuracy vs. \textbf{GPT-4} with a 1B model via \textbf{LoRA} fine-tuning (\textbf{Unsloth})}
     \resumeItemListEnd
 
   \resumeSubheading
     {Partnerships + Business Development}{Feb 2025 - May 2025}{Nas.io}{New York, NY}
     \resumeItemListStart
-      \resumeItem{Drove influencer partnerships and client onboarding for a Series A startup, generating \$2K GMV in one month while 50x'ing outreach efficiency via a \textbf{Python}/\textbf{Klaviyo} automation pipeline}
+      \resumeItem{Drove influencer partnerships and client onboarding for a Series A startup, generating \$2K GMV in one month while 50x'ing outreach via a \textbf{Python}/\textbf{Klaviyo} automation pipeline}
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -115,6 +115,11 @@
   \resumeProjectHeading{\textbf{BYOA}: Bring Your Own Agent}{May 2026}
     \resumeItemListStart
       \resumeItem{Built a \textbf{Kubernetes} platform that spins up agents on any \textbf{HuggingFace} model in one click, leveraging \textbf{NVIDIA Dynamo} for disaggregated prefill/decode serving, KV-cache-aware routing, and GPU autoscaling behind OpenAI-compatible endpoints}
+    \resumeItemListEnd
+
+  \resumeProjectHeading{\textbf{tochi.one}: AI property management}{June 2025}
+    \resumeItemListStart
+      \resumeItem{Built payment, lease-writing, and communication agents for landlords using \textbf{Agno}, with \textbf{Twilio} for communication agents and the \textbf{Stripe} API for payments}
     \resumeItemListEnd
 
   \resumeProjectHeading{\textbf{AdBlockIRL}: AR ad-blocking proof-of-concept for \textbf{Meta Quest}}{May 2025}
