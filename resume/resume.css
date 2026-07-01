@@ -1,0 +1,130 @@
+:root {
+  --paper: #f4ecd8;
+  --accent: #7a3f1d;
+  --ink: #2d1b12;
+  --muted: #6b5545;
+  --rule: #9a6a3a;
+}
+
+@page {
+  size: letter;
+  margin: 0.48in 0.52in;
+  background: var(--paper);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 8.5in;
+  margin: 0 auto;
+  padding: 0.45in 0.55in;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Apple Garamond", "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
+  font-size: 11pt;
+  line-height: 1.1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  margin: 0 0 3pt;
+  text-align: center;
+  font-size: 24pt;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+h1 + p,
+h1 + p + p {
+  margin: 0 0 3pt;
+  text-align: center;
+}
+
+h1 + p + p {
+  font-size: 10.6pt;
+  margin-bottom: 6pt;
+}
+
+h2 {
+  margin: 4pt 0 2pt;
+  padding-bottom: 1.5pt;
+  border-bottom: 1px solid var(--rule);
+  color: var(--accent);
+  font-size: 12pt;
+  line-height: 1.1;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+h2 + p {
+  margin: 0;
+  font-size: 10.6pt;
+}
+
+h3 {
+  margin: 2.5pt 0 0;
+  font-size: 11.5pt;
+  line-height: 1.1;
+}
+
+h3 + p {
+  margin: 0;
+  color: var(--accent);
+  font-style: italic;
+}
+
+h3 + p + p {
+  margin: 0;
+  color: var(--muted);
+  font-style: italic;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 1pt 0 0 0.13in;
+  padding: 0;
+  list-style-position: outside;
+}
+
+li {
+  margin: 0 0 0.3pt;
+  padding-left: 0;
+}
+
+li::marker {
+  content: "- ";
+}
+
+code {
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.9em;
+  color: #3b2417;
+}
+
+.date {
+  float: right;
+  color: var(--ink);
+  font-style: normal;
+}
+
+.location {
+  color: var(--muted);
+}
+
+@media print {
+  body {
+    max-width: none;
+    padding: 0;
+  }
+}
