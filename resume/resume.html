@@ -36,12 +36,15 @@ href="https://linkedin.com/in/mannanshukla">linkedin.com/in/mannanshukla</a>
 • <a
 href="https://github.com/mannanshukla">github.com/mannanshukla</a></p>
 <h2 id="technical-skills">Technical Skills</h2>
-<p>Go, Python, Bash, TypeScript • AWS (EC2, ECS, RDS, S3, DynamoDB,
-IAM), Kubernetes (operators, controllers, CRDs, PVCs), Kubeflow, Docker,
-Helm, ArgoCD, Terraform, Cilium, DirectPV, GitOps • vLLM, SGLang,
-TensorRT, CUDA, NCCL, DCGM, Slurm, PagedAttention, KV cache, continuous
-batching • PyTorch, Hugging Face, LoRA • Prometheus, Grafana, GitHub
-Actions, CI/CD • Auth0, JWT, RBAC</p>
+<p><strong>Languages:</strong> Python, Go, Bash, TypeScript<br />
+<strong>Inference:</strong> vLLM, SGLang, TensorRT, NVIDIA Dynamo, CUDA,
+NCCL, PagedAttention, KV cache, continuous batching<br />
+<strong>ML &amp; Agents:</strong> PyTorch, Hugging Face, LoRA,
+LangGraph, MCP, Kubeflow<br />
+<strong>Infrastructure:</strong> Kubernetes, Docker, Helm, Terraform,
+AWS, ArgoCD, Cilium, Slurm<br />
+<strong>Production:</strong> Postgres, Prometheus, Grafana, GitHub
+Actions, CI/CD, GitOps</p>
 <h2 id="experience">Experience</h2>
 <h3 id="software-engineer">Software Engineer</h3>
 <p><em>Voltage Park / Lightning AI</em> <span class="location">• San
@@ -49,44 +52,41 @@ Francisco, CA &amp; Redmond, WA</span> <span class="date">July 2025 -
 Present</span></p>
 <ul>
 <li>Shipped hot model-weight reloading for <strong>vLLM</strong>
-deployments via a <strong>Go</strong> sidecar, swapping fine-tuned
-checkpoints in-place in seconds vs. 10-30 min GPU redeploys</li>
-<li>Designed an async/batch <strong>inference platform</strong> with a
-durable <strong>Postgres</strong> task queue, pull-based sidecar
-workers, and queue-depth autoscaling to scale GPU workers to zero</li>
+inference deployments via a <strong>Go</strong> sidecar, cutting
+fine-tuned model rollout time from 10-30 minutes to seconds without
+restarting GPU workers</li>
+<li>Designed an async/batch inference platform with
+<strong>Postgres</strong>-backed task durability, pull-based GPU
+workers, and queue-depth autoscaling, enabling burst handling and
+scale-to-zero for idle workloads</li>
 <li>Built core pieces of an <strong>S3</strong>-compatible object store
 (<strong>VAST</strong>-backed): a health-aware <strong>P2C</strong>
 client-side load balancer over CNode IPs with lock-free in-flight
 tracking and automatic failover, plus
 <strong>Terraform</strong>/<strong>Vault</strong>-managed
 <strong>RDS</strong> infra</li>
-<li>Built distributed inference orchestration on
-<strong>Kubernetes</strong> in <strong>Go</strong>: deployment-target
-controllers and <strong>DynamoDB</strong> event sourcing to coordinate
-fleets of <strong>GPU</strong> serving replicas</li>
+<li>Built distributed inference orchestration in <strong>Go</strong> on
+<strong>Kubernetes</strong>, implementing deployment-target controllers
+and <strong>DynamoDB</strong> event sourcing to reconcile and recover
+fleets of GPU-serving replicas</li>
 <li>Created the <strong>vp-cloud-sdk</strong> <strong>Python</strong>
 SDK for Voltage Park’s orchestration platform, exposing
 fleet/node/remediation APIs and a full staging release pipeline with
 <strong>GitHub Actions</strong></li>
-<li>Built and operate a multi-tenant managed <strong>Kubernetes</strong>
-platform across <strong>GitOps</strong> (<strong>ArgoCD</strong>),
-<strong>Terraform</strong>/<strong>Helm</strong> IaC,
-<strong>Cilium</strong>/<strong>Envoy</strong> networking,
-<strong>NVIDIA GPU Operator</strong>, and
-<strong>kube-prometheus-stack</strong> observability, with
-tenant-isolation hardening</li>
+<li>Own a multi-tenant GPU platform spanning <strong>ArgoCD</strong>,
+<strong>Terraform</strong>, <strong>Helm</strong>,
+<strong>Cilium</strong>/<strong>Envoy</strong>, NVIDIA GPU Operator, and
+<strong>Prometheus</strong>/<strong>Grafana</strong>, with tenant
+isolation and production observability</li>
 <li>Built a <strong>Slurm</strong> GPU health-check suite for
 distributed training (ECC, PCIe AER, <strong>NCCL</strong> stalls,
 <strong>DCGM</strong> checks, thermal) that auto-drains unhealthy nodes,
 creates RMA tickets, and sends <strong>Slack</strong> alerts to protect
 multi-node jobs</li>
-<li>On-call for production <strong>H100</strong> clusters; debugged
-distributed networking, storage, and scheduling across
-<strong>WireGuard</strong>, <strong>CoreDNS</strong>,
-<strong>Cilium</strong>,
-<strong>DirectPV</strong>/<strong>PVCs</strong>,
-<strong>Longhorn</strong>, <strong>MPI Operator</strong>, and
-<strong>GPU Operator</strong></li>
+<li>Operate production <strong>H100</strong> clusters and resolve
+incidents across GPU scheduling, distributed networking, model storage,
+and <strong>NCCL</strong> workloads spanning Kubernetes and
+infrastructure layers</li>
 </ul>
 <h3 id="undergraduate-researcher-aios">Undergraduate Researcher:
 AIOS</h3>
@@ -102,12 +102,20 @@ Prof. Yongfeng Zhang</li>
 <p><em>Nas.io</em> <span class="location">• New York, NY</span> <span
 class="date">Feb 2025 - May 2025</span></p>
 <ul>
-<li>Drove influencer partnerships and client onboarding for a Series A
-startup, generating $2K GMV in one month while 50x’ing outreach via a
-<strong>Python</strong>/<strong>Klaviyo</strong> automation
-pipeline</li>
+<li>Built and owned influencer outreach automation end-to-end, including
+an <strong>Instagram scraper</strong> and
+<strong>Python</strong>/<strong>Klaviyo</strong> pipeline that increased
+outreach 50x; also led client onboarding and partnerships, generating
+$2K GMV in one month</li>
 </ul>
 <h2 id="projects">Projects</h2>
+<h3 id="byoa-bring-your-own-agent">BYOA: Bring Your Own Agent</h3>
+<ul>
+<li>Built a <strong>Kubernetes</strong> inference platform that deploys
+agents on arbitrary <strong>Hugging Face</strong> models behind
+OpenAI-compatible APIs, using <strong>NVIDIA Dynamo</strong> for
+disaggregated serving, KV-cache-aware routing, and GPU autoscaling</li>
+</ul>
 <h3 id="taskcli-swe-bench-style-evaluation-runner">TaskCLI:
 SWE-bench-style evaluation runner</h3>
 <ul>
@@ -117,21 +125,13 @@ sandboxes, hidden-test patch grading, <strong>JUnit XML</strong> result
 parsing, <strong>SQLite</strong> artifact tracking, and
 OpenAI-compatible LLM/stub solvers</li>
 </ul>
-<h3 id="byoa-bring-your-own-agent">BYOA: Bring Your Own Agent</h3>
+<h3 id="tochi.one-ai-property-management-agents">tochi.one: AI property
+management agents</h3>
 <ul>
-<li>Built a <strong>Kubernetes</strong> platform that spins up agents on
-any <strong>HuggingFace</strong> model in one click, leveraging
-<strong>NVIDIA Dynamo</strong> for disaggregated prefill/decode serving,
-KV-cache-aware routing, and GPU autoscaling behind OpenAI-compatible
-endpoints</li>
-</ul>
-<h3 id="tochi.one-ai-property-management">tochi.one: AI property
-management</h3>
-<ul>
-<li>Built payment, lease-writing, and communication agents for landlords
-using <strong>Agno</strong>, with <strong>Twilio</strong> for
-communication agents and the <strong>Stripe</strong> API for
-payments</li>
+<li>Built payment, lease-generation, and tenant-communication workflows
+using <strong>LangGraph</strong> and <strong>MCP</strong>, integrating
+<strong>Stripe</strong> and <strong>Twilio</strong> tools with
+persistent agent state</li>
 </ul>
 <h3
 id="adblockirl-ar-ad-blocking-proof-of-concept-for-meta-quest">AdBlockIRL:

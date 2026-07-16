@@ -68,6 +68,11 @@ h2 + p {
   font-size: 10.6pt;
 }
 
+#technical-skills + p {
+  font-size: 9pt;
+  line-height: 1.02;
+}
+
 h3 {
   margin: 2.5pt 0 0;
   font-size: 11.5pt;

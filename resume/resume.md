@@ -6,7 +6,11 @@ Sunnyvale, California • US Citizen
 
 ## Technical Skills
 
-Go, Python, Bash, TypeScript • AWS (EC2, ECS, RDS, S3, DynamoDB, IAM), Kubernetes (operators, controllers, CRDs, PVCs), Kubeflow, Docker, Helm, ArgoCD, Terraform, Cilium, DirectPV, GitOps • vLLM, SGLang, TensorRT, CUDA, NCCL, DCGM, Slurm, PagedAttention, KV cache, continuous batching • PyTorch, Hugging Face, LoRA • Prometheus, Grafana, GitHub Actions, CI/CD • Auth0, JWT, RBAC
+**Languages:** Python, Go, Bash, TypeScript\
+**Inference:** vLLM, SGLang, TensorRT, NVIDIA Dynamo, CUDA, NCCL, PagedAttention, KV cache, continuous batching\
+**ML & Agents:** PyTorch, Hugging Face, LoRA, LangGraph, MCP, Kubeflow\
+**Infrastructure:** Kubernetes, Docker, Helm, Terraform, AWS, ArgoCD, Cilium, Slurm\
+**Production:** Postgres, Prometheus, Grafana, GitHub Actions, CI/CD, GitOps
 
 ## Experience
 
@@ -14,14 +18,14 @@ Go, Python, Bash, TypeScript • AWS (EC2, ECS, RDS, S3, DynamoDB, IAM), Kuberne
 
 *Voltage Park / Lightning AI* <span class="location">• San Francisco, CA & Redmond, WA</span> <span class="date">July 2025 - Present</span>
 
-- Shipped hot model-weight reloading for **vLLM** deployments via a **Go** sidecar, swapping fine-tuned checkpoints in-place in seconds vs. 10-30 min GPU redeploys
-- Designed an async/batch **inference platform** with a durable **Postgres** task queue, pull-based sidecar workers, and queue-depth autoscaling to scale GPU workers to zero
+- Shipped hot model-weight reloading for **vLLM** inference deployments via a **Go** sidecar, cutting fine-tuned model rollout time from 10-30 minutes to seconds without restarting GPU workers
+- Designed an async/batch inference platform with **Postgres**-backed task durability, pull-based GPU workers, and queue-depth autoscaling, enabling burst handling and scale-to-zero for idle workloads
 - Built core pieces of an **S3**-compatible object store (**VAST**-backed): a health-aware **P2C** client-side load balancer over CNode IPs with lock-free in-flight tracking and automatic failover, plus **Terraform**/**Vault**-managed **RDS** infra
-- Built distributed inference orchestration on **Kubernetes** in **Go**: deployment-target controllers and **DynamoDB** event sourcing to coordinate fleets of **GPU** serving replicas
+- Built distributed inference orchestration in **Go** on **Kubernetes**, implementing deployment-target controllers and **DynamoDB** event sourcing to reconcile and recover fleets of GPU-serving replicas
 - Created the **vp-cloud-sdk** **Python** SDK for Voltage Park's orchestration platform, exposing fleet/node/remediation APIs and a full staging release pipeline with **GitHub Actions**
-- Built and operate a multi-tenant managed **Kubernetes** platform across **GitOps** (**ArgoCD**), **Terraform**/**Helm** IaC, **Cilium**/**Envoy** networking, **NVIDIA GPU Operator**, and **kube-prometheus-stack** observability, with tenant-isolation hardening
+- Own a multi-tenant GPU platform spanning **ArgoCD**, **Terraform**, **Helm**, **Cilium**/**Envoy**, NVIDIA GPU Operator, and **Prometheus**/**Grafana**, with tenant isolation and production observability
 - Built a **Slurm** GPU health-check suite for distributed training (ECC, PCIe AER, **NCCL** stalls, **DCGM** checks, thermal) that auto-drains unhealthy nodes, creates RMA tickets, and sends **Slack** alerts to protect multi-node jobs
-- On-call for production **H100** clusters; debugged distributed networking, storage, and scheduling across **WireGuard**, **CoreDNS**, **Cilium**, **DirectPV**/**PVCs**, **Longhorn**, **MPI Operator**, and **GPU Operator**
+- Operate production **H100** clusters and resolve incidents across GPU scheduling, distributed networking, model storage, and **NCCL** workloads spanning Kubernetes and infrastructure layers
 
 ### Undergraduate Researcher: AIOS
 
@@ -33,21 +37,21 @@ Go, Python, Bash, TypeScript • AWS (EC2, ECS, RDS, S3, DynamoDB, IAM), Kuberne
 
 *Nas.io* <span class="location">• New York, NY</span> <span class="date">Feb 2025 - May 2025</span>
 
-- Drove influencer partnerships and client onboarding for a Series A startup, generating $2K GMV in one month while 50x'ing outreach via a **Python**/**Klaviyo** automation pipeline
+- Built and owned influencer outreach automation end-to-end, including an **Instagram scraper** and **Python**/**Klaviyo** pipeline that increased outreach 50x; also led client onboarding and partnerships, generating $2K GMV in one month
 
 ## Projects
+
+### BYOA: Bring Your Own Agent
+
+- Built a **Kubernetes** inference platform that deploys agents on arbitrary **Hugging Face** models behind OpenAI-compatible APIs, using **NVIDIA Dynamo** for disaggregated serving, KV-cache-aware routing, and GPU autoscaling
 
 ### TaskCLI: SWE-bench-style evaluation runner
 
 - Built a **Python** agent-evaluation harness for SWE-bench-style task bundles with reproducible **Docker** sandboxes, hidden-test patch grading, **JUnit XML** result parsing, **SQLite** artifact tracking, and OpenAI-compatible LLM/stub solvers
 
-### BYOA: Bring Your Own Agent
+### tochi.one: AI property management agents
 
-- Built a **Kubernetes** platform that spins up agents on any **HuggingFace** model in one click, leveraging **NVIDIA Dynamo** for disaggregated prefill/decode serving, KV-cache-aware routing, and GPU autoscaling behind OpenAI-compatible endpoints
-
-### tochi.one: AI property management
-
-- Built payment, lease-writing, and communication agents for landlords using **Agno**, with **Twilio** for communication agents and the **Stripe** API for payments
+- Built payment, lease-generation, and tenant-communication workflows using **LangGraph** and **MCP**, integrating **Stripe** and **Twilio** tools with persistent agent state
 
 ### AdBlockIRL: AR ad-blocking proof-of-concept for **Meta Quest**
 
