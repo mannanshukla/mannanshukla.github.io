@@ -1,0 +1,8 @@
+# mannan.dev — crawlers and agents welcome.
+User-agent: *
+Allow: /
+
+# Agent-readable index for spawnpoint (see https://llmstxt.org):
+#   https://mannan.dev/spawnpoint-site/llms.txt
+
+Sitemap: https://mannan.dev/sitemap.xml
