@@ -1,10 +1,10 @@
 # Mannan Shukla
 
-> Personal site of Mannan Shukla. Primary project: spawnpoint — the cloud for small software, where an agent deploys a small app over MCP and gets back a public URL.
+> Personal site of Mannan Shukla. Primary project: spawnpoint — the easiest way to bring your software online, where an agent deploys a small app over MCP and gets back a public URL.
 
 ## Projects
 
-- [spawnpoint](https://mannan.dev/spawnpoint-site/): The cloud for small software — an agent builds a small app, calls spawnpoint's MCP server to deploy it, and gets back a public URL.
+- [spawnpoint](https://mannan.dev/spawnpoint-site/): The easiest way to bring your software online — an agent builds a small app, calls spawnpoint's MCP server to deploy it, and gets back a public URL.
 - [spawnpoint — agent-readable index](https://mannan.dev/spawnpoint-site/llms.txt): Full markdown map of the spawnpoint docs (getting started, MCP server, API tokens).
 
 ## Optional
