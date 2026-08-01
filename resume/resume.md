@@ -18,7 +18,7 @@ Sunnyvale, California • US Citizen
 
 *spawnpoint* <span class="location">• San Francisco, CA</span> <span class="date">July 2026 - Present</span>
 
-- Built **spawnpoint**, an agent-native deploy platform: an AI agent ships an app over **MCP** and gets back a live public URL
+- Built **spawnpoint**, an agent-native deploy platform: an AI agent ships an app over **MCP** and gets a live URL
 - Built a first-class **MCP** server as the agent-facing API over Streamable HTTP, scoping every tool to its caller
 - Implemented an **OAuth 2.1** server for MCP with dynamic client registration, **PKCE** (S256), and token rotation
 - Built passwordless **Auth0** magic-link sign-in, stateless **HMAC**-signed sessions, and **SHA-256**-hashed tokens
@@ -42,6 +42,12 @@ Sunnyvale, California • US Citizen
 *Rutgers University* <span class="location">• New Brunswick, NJ</span> <span class="date">Apr 2024 - Apr 2025</span>
 
 - Built an **LLM** agent recommender hitting 83% accuracy vs. **GPT-4** with a 1B model via **LoRA** fine-tuning (**Unsloth**)
+
+### Partnerships Intern
+
+*Nas.io* <span class="location">• New York, NY</span> <span class="date">Feb 2025 - May 2025</span>
+
+- Built an **Instagram scraper** and **Python**/**Klaviyo** pipeline that lifted outreach 50x; led partnerships to $2K GMV
 
 ## Projects
 
