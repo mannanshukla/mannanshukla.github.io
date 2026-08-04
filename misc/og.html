@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>og source — Mannan Shukla</title>
+  <!-- Source for /og.png. Render: see misc/og.sh -->
+  <style>
+    @font-face {
+      font-family: "DM Sans";
+      font-weight: 400;
+      src: url("../resume/fonts/dm-sans-latin-400.woff2") format("woff2");
+    }
+    @font-face {
+      font-family: "DM Sans";
+      font-weight: 500;
+      src: url("../resume/fonts/dm-sans-latin-500.woff2") format("woff2");
+    }
+    @font-face {
+      font-family: "DM Sans";
+      font-weight: 700;
+      src: url("../resume/fonts/dm-sans-latin-700.woff2") format("woff2");
+    }
+
+    :root {
+      --paper: #f7f4ee;
+      --accent: #cc0033;
+      --accent-deep: #a4002a;
+      --ink: #221d18;
+      --muted: #6b625a;
+      --hairline: rgba(34, 29, 24, 0.16);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+
+    .card {
+      position: relative;
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 96px;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* warm bleed from the accent, upper right */
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -280px;
+      right: -220px;
+      width: 780px;
+      height: 780px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(204, 0, 51, .13), rgba(204, 0, 51, 0) 68%);
+    }
+    /* accent rule down the left edge */
+    .card::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 14px;
+      height: 100%;
+      background: linear-gradient(180deg, #e0335a, var(--accent) 55%, var(--accent-deep));
+    }
+
+    .row { position: relative; display: flex; align-items: center; gap: 28px; }
+
+    .mk {
+      display: grid;
+      place-items: center;
+      width: 116px;
+      height: 116px;
+      border-radius: 31px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 56px;
+      letter-spacing: -.06em;
+      line-height: 1;
+      background-image: linear-gradient(180deg, #e0335a, var(--accent) 55%, var(--accent-deep));
+      box-shadow: inset 0 2px 0 rgba(255,255,255,.5), 0 10px 30px rgba(204,0,51,.22);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 84px;
+      font-weight: 700;
+      letter-spacing: -.035em;
+      line-height: 1;
+    }
+
+    .lines {
+      position: relative;
+      margin: 40px 0 0;
+      padding-left: 4px;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--muted);
+    }
+
+    .foot {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-top: 52px;
+      padding-top: 30px;
+      border-top: 1px solid var(--hairline);
+      font-size: 27px;
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .foot .dot { color: var(--hairline); }
+    .foot .sp { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="row">
+      <span class="mk">ms</span>
+      <h1>Mannan Shukla</h1>
+    </div>
+    <p class="lines">
+      inference platform engineering<br>
+      cloud native software engineer<br>
+      building tools for agents
+    </p>
+    <div class="foot">
+      <span>mannan.dev</span>
+      <span class="dot">/</span>
+      <span class="sp">spawnpoint.lol</span>
+    </div>
+  </div>
+</body>
+</html>
