@@ -10,7 +10,7 @@ Sunnyvale, California • US Citizen
 **Inference:** vLLM, SGLang, TensorRT, NVIDIA Dynamo, CUDA, NCCL, PagedAttention, KV cache, continuous batching\
 **ML & Agents:** PyTorch, Hugging Face, LoRA, LangGraph, MCP, Kubeflow\
 **Infrastructure:** Kubernetes, Docker, Helm, Terraform, AWS, ArgoCD, Cilium, Slurm\
-**Production:** Postgres, Prometheus, Grafana, GitHub Actions, CI/CD, GitOps
+**Production:** Postgres (Neon), Caddy, Stripe, Auth0, Prometheus, Grafana, GitHub Actions, CI/CD, GitOps
 
 ## Experience
 
@@ -18,12 +18,12 @@ Sunnyvale, California • US Citizen
 
 *spawnpoint* <span class="location">• San Francisco, CA</span> <span class="date">July 2026 - Present</span>
 
-- Built **spawnpoint**, an agent-native deploy platform: an AI agent ships an app over **MCP** and gets a live URL
-- Built a first-class **MCP** server as the agent-facing API over Streamable HTTP, scoping every tool to its caller
-- Implemented an **OAuth 2.1** server for MCP with dynamic client registration, **PKCE** (S256), and token rotation
-- Built passwordless **Auth0** magic-link sign-in, stateless **HMAC**-signed sessions, and **SHA-256**-hashed tokens
-- Built the deploy path in pure **Go**: boot an Ubuntu **CPU VM**, run each app as a **Docker** service, verify readiness
-- Own the full **CI/CD**: **GitHub Actions** build/vet/test and a live deploy check, shipping to **AWS ECS**
+- Building **spawnpoint** ([getspawnpoint.com](https://getspawnpoint.com)), an agent-native hosting platform: an AI agent deploys an app over **MCP** and gets back a public HTTPS link, private by default and shared like a doc
+- Built the **MCP** server in **Go** (17 tools, stateless Streamable HTTP) and the **OAuth 2.1** server behind it: dynamic client registration, **PKCE** S256, single-use codes, rotating refresh tokens with reuse detection
+- Built the deploy path: boot a CPU VM, push the bundle over **SSH** in chunked commands with an atomic swap, retry through a lossy proxy, reconcile orphans at startup; four runtimes (static, Node, Python, **Docker**), builds run on the user's own VM
+- Shipped gated sharing: a host-routed share gate with email-OTP viewers and per-request allow lists, DNS-verified **custom domains** with on-demand **TLS** via **Caddy**, and scale-to-zero that stops idle VMs and wakes them on the next visit
+- Built **Stripe** subscription billing (hosted checkout, portal, signature-verified webhooks), passwordless **Auth0** sign-in, stateless **HMAC**-signed sessions, and sealed-at-rest per-project env vars
+- Run production with **Postgres** on **Neon**, zero-downtime blue/green deploys behind Caddy, and **GitHub Actions** CI/CD (gofmt, vet, race tests, doc-drift checks); ship a **Claude Code** plugin auto-published to a public marketplace
 
 ### Software Engineer
 
