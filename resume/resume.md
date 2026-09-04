@@ -18,12 +18,12 @@ Sunnyvale, California • US Citizen
 
 *spawnpoint* <span class="location">• San Francisco, CA</span> <span class="date">July 2026 - Present</span>
 
-- Building **spawnpoint** ([getspawnpoint.com](https://getspawnpoint.com)), an agent-native hosting platform: an AI agent deploys an app over **MCP** and gets back a public HTTPS link, private by default and shared like a doc
-- Built the **MCP** server in **Go** (17 tools, stateless Streamable HTTP) and the **OAuth 2.1** server behind it: dynamic client registration, **PKCE** S256, single-use codes, rotating refresh tokens with reuse detection
-- Built the deploy path: boot a CPU VM, push the bundle over **SSH** in chunked commands with an atomic swap, retry through a lossy proxy, reconcile orphans at startup; four runtimes (static, Node, Python, **Docker**), builds run on the user's own VM
-- Shipped gated sharing: a host-routed share gate with email-OTP viewers and per-request allow lists, DNS-verified **custom domains** with on-demand **TLS** via **Caddy**, and scale-to-zero that stops idle VMs and wakes them on the next visit
-- Built **Stripe** subscription billing (hosted checkout, portal, signature-verified webhooks), passwordless **Auth0** sign-in, stateless **HMAC**-signed sessions, and sealed-at-rest per-project env vars
-- Run production with **Postgres** on **Neon**, zero-downtime blue/green deploys behind Caddy, and **GitHub Actions** CI/CD (gofmt, vet, race tests, doc-drift checks); ship a **Claude Code** plugin auto-published to a public marketplace
+- Building **spawnpoint** ([getspawnpoint.com](https://getspawnpoint.com)): an AI agent deploys an app over **MCP** and gets a public HTTPS link
+- Built the **MCP** server in **Go** (17 tools, stateless HTTP) and an **OAuth 2.1** server: **PKCE**, one-shot codes, rotation
+- Built the deploy path: boot a CPU VM, push over **SSH** in chunked commands with an atomic swap, reconcile orphans at startup; four runtimes (static, Node, Python, **Docker**), builds on the user's VM
+- Shipped gated sharing (email-OTP viewers, allow lists), DNS-verified **custom domains**, scale-to-zero on idle
+- Built **Stripe** subscription billing, passwordless **Auth0** sign-in, stateless **HMAC** sessions, sealed env vars
+- Run production on **Neon** **Postgres** with zero-downtime blue/green deploys and **GitHub Actions** CI/CD
 
 ### Software Engineer
 
