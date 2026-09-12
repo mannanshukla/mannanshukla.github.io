@@ -22,10 +22,9 @@
     }
 
     :root {
-      --paper: #f7f4ee;
+      --paper: #ffffff;
       --accent: #cc0033;
-      --accent-deep: #a4002a;
-      --ink: #221d18;
+            --ink: #221d18;
       --muted: #6b625a;
       --hairline: rgba(34, 29, 24, 0.16);
     }
@@ -48,27 +47,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* warm bleed from the accent, upper right */
-    .card::before {
-      content: "";
-      position: absolute;
-      top: -280px;
-      right: -220px;
-      width: 780px;
-      height: 780px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(204, 0, 51, .13), rgba(204, 0, 51, 0) 68%);
-    }
-    /* accent rule down the left edge */
-    .card::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 14px;
-      height: 100%;
-      background: linear-gradient(180deg, #e0335a, var(--accent) 55%, var(--accent-deep));
-    }
 
     .row { position: relative; display: flex; align-items: center; gap: 28px; }
 
@@ -83,8 +61,7 @@
       font-size: 56px;
       letter-spacing: -.06em;
       line-height: 1;
-      background-image: linear-gradient(180deg, #e0335a, var(--accent) 55%, var(--accent-deep));
-      box-shadow: inset 0 2px 0 rgba(255,255,255,.5), 0 10px 30px rgba(204,0,51,.22);
+      background: var(--accent);
     }
 
     h1 {
@@ -135,7 +112,7 @@
     <div class="foot">
       <span>mannan.dev</span>
       <span class="dot">/</span>
-      <span class="sp">spawnpoint.lol</span>
+      <span class="sp">getspawnpoint.com</span>
     </div>
   </div>
 </body>
