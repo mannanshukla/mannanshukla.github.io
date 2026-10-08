@@ -21,7 +21,7 @@ Sunnyvale, California • US Citizen
 - Building **spawnpoint** ([getspawnpoint.com](https://getspawnpoint.com)): an AI agent deploys an app over **MCP** and gets a public HTTPS link
 - Built the **MCP** server in **Go** (23 tools, stateless HTTP) and an **OAuth 2.1** server: **PKCE**, one-shot codes, rotation
 - Replaced SSH pushes with a **pull agent** on each VM (cloud-init bootstrap, one-time tokens, long-polled jobs, presigned **S3** bundles): 4 MB deploys 93 s to 72 s; four runtimes incl. **Docker**
-- Shipped gated sharing (email-OTP viewers, allow lists), DNS-verified **custom domains**, scale-to-zero on idle
+- Split one binary into a control plane and a **data plane** gate: email-OTP sharing, **custom domains**, scale-to-zero
 - Built per-project managed **Postgres** and **S3** storage, **Stripe** billing, passwordless **Auth0**, sealed env vars
 - Run production on **AWS** (EC2, **RDS**, S3) with zero-downtime deploys over **SSM** from **GitHub Actions**
 
