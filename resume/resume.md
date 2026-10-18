@@ -10,7 +10,7 @@ Sunnyvale, California • US Citizen
 **Inference:** vLLM, SGLang, TensorRT, NVIDIA Dynamo, CUDA, NCCL, PagedAttention, KV cache, continuous batching\
 **ML & Agents:** PyTorch, Hugging Face, LoRA, LangGraph, MCP, Kubeflow\
 **Infrastructure:** Kubernetes, Docker, Helm, Terraform, AWS, ArgoCD, Cilium, Slurm\
-**Production:** Postgres (Neon), Caddy, Stripe, Auth0, Prometheus, Grafana, GitHub Actions, CI/CD, GitOps
+**Production:** Postgres (RDS), Caddy, Stripe, Auth0, Prometheus, Grafana, GitHub Actions, CI/CD, GitOps
 
 ## Experience
 
@@ -18,12 +18,13 @@ Sunnyvale, California • US Citizen
 
 *spawnpoint* <span class="location">• San Francisco, CA</span> <span class="date">July 2026 - Present</span>
 
-- Building **spawnpoint** ([getspawnpoint.com](https://getspawnpoint.com)): an AI agent deploys an app over **MCP** and gets a public HTTPS link
-- Built the **MCP** server in **Go** (23 tools, stateless HTTP) and an **OAuth 2.1** server: **PKCE**, one-shot codes, rotation
-- Replaced SSH pushes with a **pull agent** on each VM (cloud-init bootstrap, one-time tokens, long-polled jobs, presigned **S3** bundles): 4 MB deploys 93 s to 72 s; four runtimes incl. **Docker**
-- Split one binary into a control plane and a **data plane** gate: email-OTP sharing, **custom domains**, scale-to-zero
-- Built per-project managed **Postgres** and **S3** storage, **Stripe** billing, passwordless **Auth0**, sealed env vars
-- Run production on **AWS** (EC2, **RDS**, S3) with zero-downtime deploys over **SSM** from **GitHub Actions**
+- Building **spawnpoint** ([getspawnpoint.com](https://getspawnpoint.com)): where a team's AI lives; agents ship tools, MCP servers, AI apps
+- Built the **MCP** server in **Go** (30 tools) and tuned its text until **Qwen 3.5 4B** went from 0.27 to 0.74 on evals
+- Built **OAuth 2.1** (**PKCE**, rotation) and a **data plane** gate: domain-wide sharing, OAuth MCP apps, scale-to-zero
+- Built **teams**: domain join, roles, **Stripe** billing, a team domain, a shared **S3** space, skills served over **MCP**
+- Built an **OpenAI**/**Anthropic**-compatible **inference gateway** for open models: per-app keys, usage metering
+- Replaced SSH pushes with a **pull agent** on each VM (deploys 93 s to 72 s); static sites serve from **S3**, no VM
+- Run production on **AWS** (EC2, **RDS**, S3) with per-app **Postgres** and **S3**, zero-downtime deploys over **SSM**
 
 ### Software Engineer
 

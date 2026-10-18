@@ -1,12 +1,15 @@
 # Mannan Shukla
 
-> Personal site of Mannan Shukla. Primary project: spawnpoint — the easiest way to bring your software online, where an agent deploys a small app over MCP and gets back a public URL.
+> Personal site of Mannan Shukla: inference platform engineering, cloud native software engineering, and building tools for agents. Founder of spawnpoint, the place where your team's AI lives.
 
 ## Projects
 
-- [spawnpoint](https://mannan.dev/spawnpoint-site/): The easiest way to bring your software online — an agent builds a small app, calls spawnpoint's MCP server to deploy it, and gets back a public URL.
-- [spawnpoint — agent-readable index](https://mannan.dev/spawnpoint-site/llms.txt): Full markdown map of the spawnpoint docs (getting started, MCP server, API tokens).
+- [spawnpoint](https://getspawnpoint.com/): The place where your team's AI lives. A coding agent builds a tool, an MCP server, or an app that uses AI, deploys it through spawnpoint's MCP server, and gets back a private link to share with one person or a whole company.
+- [spawnpoint for agents](https://getspawnpoint.com/llms.txt): spawnpoint's agent-readable index: connecting an agent, what you can deploy, the MCP tools, sharing, and plans.
 
-## Optional
+## About
 
-- [Home](https://mannan.dev/): Landing page.
+- [Home](https://mannan.dev/): Landing page with links.
+- [Resume](https://mannan.dev/resume/resume.pdf): One-page resume (PDF).
+- [GitHub](https://github.com/mannanshukla): Code.
+- [LinkedIn](https://linkedin.com/in/mannanshukla): Work history.
