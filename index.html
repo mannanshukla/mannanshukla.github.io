@@ -5,120 +5,214 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mannan Shukla</title>
   <meta name="description" content="Inference platform engineering, cloud native software engineering, building tools for agents.">
+  <meta name="theme-color" content="#171717">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mannan.dev/">
   <meta property="og:title" content="Mannan Shukla">
   <meta property="og:description" content="Inference platform engineering, cloud native software engineering, building tools for agents.">
-  <meta property="og:image" content="https://mannan.dev/og.png">
+  <meta property="og:image" content="https://mannan.dev/og.png?v=2">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Mannan Shukla — inference platform engineering, cloud native software engineer, building tools for agents.">
+  <meta property="og:image:alt" content="Mannan Shukla over spawnpoint's pink tile flock: inference platform engineering, cloud native software engineer, building tools for agents.">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@collagenfan">
   <meta name="twitter:creator" content="@collagenfan">
-  <meta name="twitter:image" content="https://mannan.dev/og.png">
+  <meta name="twitter:image" content="https://mannan.dev/og.png?v=2">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- spawnpoint's faces: Geist and Stack Sans Headline, both SIL Open Font License. -->
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Stack+Sans+Headline:wght@500&display=swap" rel="stylesheet">
   <style>
+    /* spawnpoint's dark theme (getspawnpoint.com): the #171717 canvas, the
+       pink tile flock behind a black glass card, Geist for text, Stack Sans
+       Headline for the name, a white primary pill and glass secondary pills. */
+    :root {
+      color-scheme: dark;
+      --canvas: #171717;
+      --foreground: #ffffff;
+      --muted: #a1a3a6;
+      --accent: #ef285e;
+      --font-ui: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      --font-headline: "Stack Sans Headline", "Geist", ui-sans-serif, system-ui, sans-serif;
+      --ring: color-mix(in srgb, #fff 10%, transparent);
+      --glass: color-mix(in srgb, #fff 7%, transparent);
+      --glass-hover: color-mix(in srgb, #fff 12%, transparent);
+      --glass-edge: inset 0 1px 0 color-mix(in srgb, #fff 16%, transparent), 0 0 0 1px color-mix(in srgb, #fff 9%, transparent);
+    }
     * { box-sizing: border-box; }
+    html { background: var(--canvas); }
     body {
       min-height: 100dvh;
       margin: 0;
-      padding: 2rem 1rem;
+      padding: 48px 16px;
+      display: grid;
+      place-items: center;
+      background: var(--canvas);
+      color: var(--foreground);
+      font-family: var(--font-ui);
+      font-size: 15px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* The flock, fixed behind everything; brand/flock.js draws it. */
+    .stage {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      background: var(--canvas);
+    }
+    .stage canvas { display: block; width: 100%; height: 100%; }
+    .stage::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(ellipse 70% 60% at 50% 50%, color-mix(in srgb, #000 35%, transparent), transparent 70%);
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 560px);
+      padding: 40px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
       text-align: center;
-      font-family: system-ui, sans-serif;
-      line-height: 1.6;
+      border-radius: 17px;
+      background: color-mix(in srgb, #000 68%, transparent);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: inset 0 1px 0 color-mix(in srgb, #fff 14%, transparent), 0 0 0 1px var(--ring), 0 3px 10px 0.5px #0000000b, 0 12px 40px 2px #00000010;
     }
-    main { max-width: 640px; width: 100%; }
-    main > :first-child { margin-top: 0; }
-    main > :last-child { margin-bottom: 0; }
-    img { display: block; margin: 0 auto; }
-    img { max-width: 100%; height: auto; }
-
-    /* mark — spawnpoint logo style */
-    .mk {
-      display: inline-grid;
-      place-items: center;
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: -.06em;
-      line-height: 1;
-      background-image: linear-gradient(180deg, #e0335a, #cc0033 55%, #a4002a);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
+    .photo {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 11px;
+      box-shadow: 0 0 0 1px var(--ring);
     }
-    .mk.lg { width: 56px; height: 56px; border-radius: 15px; font-size: 27px; }
-    .mk.sm {
-      width: 24px; height: 24px;
-      border-radius: 7px;
-      font-size: 11.5px;
-      vertical-align: 0;
-    }
-
     h1 {
-      display: flex;
+      margin: 28px 0 12px;
+      font-family: var(--font-headline);
+      font-weight: 500;
+      font-size: clamp(38px, 9vw, 56px);
+      line-height: 1;
+      letter-spacing: -0.025em;
+    }
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    .btn {
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: .62rem;
-      letter-spacing: -.035em;
+      gap: 8px;
+      height: 36px;
+      padding: 0 16px;
+      border-radius: 999px;
+      color: var(--foreground);
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background-color .15s ease, box-shadow .15s ease;
     }
-    a { color: #cc0033; }
-    a:hover { color: #a4002a; }
+    .btn:focus-visible { outline: 2px solid color-mix(in srgb, #fff 50%, transparent); outline-offset: 2px; }
+    .btn-primary {
+      height: 44px;
+      padding: 0 22px;
+      color: #000;
+      background: #fff;
+      font-size: 15px;
+    }
+    .btn-primary:hover { box-shadow: 0 2px 8px #0000004d; }
+    .btn-ghost {
+      background: var(--glass);
+      backdrop-filter: blur(14px) saturate(1.3);
+      -webkit-backdrop-filter: blur(14px) saturate(1.3);
+      box-shadow: var(--glass-edge);
+    }
+    .btn-ghost:hover { background: var(--glass-hover); }
+    .btn svg { flex: none; width: 15px; height: 15px; fill: currentColor; }
+    .btn .mark { width: auto; height: 13px; margin-bottom: 1px; }
 
-    /* link tiles — mark above label */
+    .cta { margin-top: 28px; }
     .links {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
-      gap: 1.2rem 1.6rem;
-      margin: 2rem 0 1rem;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
     }
-    .links a {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: .45rem;
-      text-decoration: none;
-      font-size: .9rem;
+    .email { margin: 24px 0 0; font-size: 14px; }
+    .email a {
+      color: var(--muted);
+      text-decoration: underline;
+      text-decoration-color: color-mix(in srgb, var(--accent) 70%, transparent);
+      text-underline-offset: 3px;
     }
-    .mk.icon { width: 44px; height: 44px; border-radius: 12px; }
-    .mk.icon svg { width: 22px; height: 22px; fill: #fff; }
-    .email { margin-top: 0; font-size: .9rem; }
+    .email a:hover { color: var(--accent); }
+
+    @media (max-width: 560px) {
+      body { padding: 24px 16px; }
+      main { padding: 24px; }
+      h1 { margin-top: 24px; }
+      .lead { font-size: 16px; line-height: 24px; }
+      .cta, .cta .btn { width: 100%; }
+      .links { display: grid; grid-template-columns: 1fr 1fr; width: 100%; }
+    }
   </style>
 </head>
 <body>
+  <div class="stage" aria-hidden="true"><canvas id="hero-flock"></canvas></div>
   <main>
-  <h1><span class="mk lg" aria-hidden="true">ms</span>Mannan Shukla</h1>
-  <img src="mannan5.jpg" alt="Mannan Shukla" width="400">
-  <p>
-    inference platform engineering<br>
-    cloud native software engineer<br>
-    building tools for agents<br><br>
-    check out <span class="mk sm" aria-hidden="true">sp</span> <a href="https://getspawnpoint.com">spawnpoint</a>
-  </p>
-  <!-- icons: Font Awesome Free 6.7.2 (CC BY 4.0) — https://fontawesome.com/license/free -->
-  <div class="links">
-    <a href="/resume">
-      <span class="mk icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M64 464c-8.8 0-16-7.2-16-16L48 64c0-8.8 7.2-16 16-16l160 0 0 80c0 17.7 14.3 32 32 32l80 0 0 288c0 8.8-7.2 16-16 16L64 464zM64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-293.5c0-17-6.7-33.3-18.7-45.3L274.7 18.7C262.7 6.7 246.5 0 229.5 0L64 0zm56 256c-13.3 0-24 10.7-24 24s10.7 24 24 24l144 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-144 0zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24l144 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-144 0z"/></svg></span>
-      Resume
-    </a>
-    <a href="https://github.com/mannanshukla">
-      <span class="mk icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span>
-      GitHub
-    </a>
-    <a href="https://linkedin.com/in/mannanshukla">
-      <span class="mk icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></span>
-      LinkedIn
-    </a>
-    <a href="https://x.com/collagenfan">
-      <span class="mk icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></span>
-      Twitter
-    </a>
-  </div>
-  <p class="email"><a href="mailto:mannanshukla@icloud.com">mannanshukla@icloud.com</a></p>
+    <img class="photo" src="mannan5.jpg" alt="Mannan Shukla" width="1115" height="676">
+    <h1>Mannan Shukla</h1>
+    <p class="lead">
+      inference platform engineering<br>
+      cloud native software engineer<br>
+      building tools for agents
+    </p>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://getspawnpoint.com">
+        <!-- spawnpoint's mark, the pink S tetromino (brand/mark.svg on getspawnpoint.com). -->
+        <svg class="mark" viewBox="3.7 7.95 24.6 16.1" aria-hidden="true"><rect x="12.2" y="7.95" width="7.6" height="7.6" rx="1.4" fill="#ef285e"/><rect x="12.2" y="7.95" width="7.6" height="2.13" rx="1.4" fill="#ffd2de" opacity=".55"/><rect x="20.7" y="7.95" width="7.6" height="7.6" rx="1.4" fill="#ef285e"/><rect x="20.7" y="7.95" width="7.6" height="2.13" rx="1.4" fill="#ffd2de" opacity=".55"/><rect x="3.7" y="16.45" width="7.6" height="7.6" rx="1.4" fill="#ef285e"/><rect x="3.7" y="16.45" width="7.6" height="2.13" rx="1.4" fill="#ffd2de" opacity=".55"/><rect x="12.2" y="16.45" width="7.6" height="7.6" rx="1.4" fill="#ef285e"/><rect x="12.2" y="16.45" width="7.6" height="2.13" rx="1.4" fill="#ffd2de" opacity=".55"/></svg>
+        check out spawnpoint
+      </a>
+    </div>
+    <!-- icons: Font Awesome Free 6.7.2 (CC BY 4.0): https://fontawesome.com/license/free -->
+    <nav class="links" aria-label="Links">
+      <a class="btn btn-ghost" href="/resume">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" aria-hidden="true"><path d="M64 464c-8.8 0-16-7.2-16-16L48 64c0-8.8 7.2-16 16-16l160 0 0 80c0 17.7 14.3 32 32 32l80 0 0 288c0 8.8-7.2 16-16 16L64 464zM64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-293.5c0-17-6.7-33.3-18.7-45.3L274.7 18.7C262.7 6.7 246.5 0 229.5 0L64 0zm56 256c-13.3 0-24 10.7-24 24s10.7 24 24 24l144 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-144 0zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24l144 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-144 0z"/></svg>
+        Resume
+      </a>
+      <a class="btn btn-ghost" href="https://github.com/mannanshukla">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" aria-hidden="true"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+        GitHub
+      </a>
+      <a class="btn btn-ghost" href="https://linkedin.com/in/mannanshukla">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+        LinkedIn
+      </a>
+      <a class="btn btn-ghost" href="https://x.com/collagenfan">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+        Twitter
+      </a>
+    </nav>
+    <p class="email"><a href="mailto:mannanshukla@icloud.com">mannanshukla@icloud.com</a></p>
   </main>
+  <script src="brand/flock-frames.js"></script>
+  <script src="brand/flock.js"></script>
 </body>
 </html>

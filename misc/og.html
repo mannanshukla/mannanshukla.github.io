@@ -2,118 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>og source — Mannan Shukla</title>
-  <!-- Source for /og.png. Render: see misc/og.sh -->
+  <title>og source: Mannan Shukla</title>
+  <!-- Source for /og.png. Render: see misc/og.sh (reduced motion holds the
+       flock on its first keyframe). Same look as spawnpoint's og card. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Stack+Sans+Headline:wght@500&display=swap" rel="stylesheet">
   <style>
-    @font-face {
-      font-family: "DM Sans";
-      font-weight: 400;
-      src: url("../resume/fonts/dm-sans-latin-400.woff2") format("woff2");
-    }
-    @font-face {
-      font-family: "DM Sans";
-      font-weight: 500;
-      src: url("../resume/fonts/dm-sans-latin-500.woff2") format("woff2");
-    }
-    @font-face {
-      font-family: "DM Sans";
-      font-weight: 700;
-      src: url("../resume/fonts/dm-sans-latin-700.woff2") format("woff2");
-    }
-
-    :root {
-      --paper: #ffffff;
-      --accent: #cc0033;
-            --ink: #221d18;
-      --muted: #6b625a;
-      --hairline: rgba(34, 29, 24, 0.16);
-    }
-
     * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; }
-
+    html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: #171717; }
+    .og { position: relative; width: 1200px; height: 630px; overflow: hidden; }
+    canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
     .card {
-      position: relative;
-      width: 1200px;
-      height: 630px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 0 96px;
-      background: var(--paper);
-      color: var(--ink);
-      font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+      position: absolute;
+      left: 64px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 640px;
+      padding: 52px 56px 48px;
+      border-radius: 28px;
+      background: color-mix(in srgb, #000 70%, transparent);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.14), 0 0 0 1px rgba(255,255,255,.1), 0 30px 60px rgba(0,0,0,.5);
+      color: #fff;
+      font-family: "Geist", ui-sans-serif, system-ui, sans-serif;
       -webkit-font-smoothing: antialiased;
     }
-
-
-    .row { position: relative; display: flex; align-items: center; gap: 28px; }
-
-    .mk {
-      display: grid;
-      place-items: center;
-      width: 116px;
-      height: 116px;
-      border-radius: 31px;
-      color: #fff;
-      font-weight: 700;
-      font-size: 56px;
-      letter-spacing: -.06em;
-      line-height: 1;
-      background: var(--accent);
-    }
-
     h1 {
-      margin: 0;
-      font-size: 84px;
-      font-weight: 700;
-      letter-spacing: -.035em;
-      line-height: 1;
+      margin: 0 0 24px;
+      font-family: "Stack Sans Headline", "Geist", sans-serif;
+      font-weight: 500;
+      font-size: 76px;
+      line-height: .98;
+      letter-spacing: -.025em;
     }
-
-    .lines {
-      position: relative;
-      margin: 40px 0 0;
-      padding-left: 4px;
-      font-size: 32px;
-      font-weight: 400;
-      line-height: 1.5;
-      color: var(--muted);
-    }
-
+    .lines { margin: 0; font-size: 27px; line-height: 1.4; color: rgba(255,255,255,.7); }
     .foot {
-      position: relative;
       display: flex;
       align-items: center;
-      gap: 18px;
-      margin-top: 52px;
-      padding-top: 30px;
-      border-top: 1px solid var(--hairline);
-      font-size: 27px;
+      gap: 16px;
+      margin-top: 36px;
+      padding-top: 28px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.12);
+      font-size: 24px;
       font-weight: 500;
-      color: var(--ink);
     }
-    .foot .dot { color: var(--hairline); }
-    .foot .sp { color: var(--accent); }
+    .foot .dot { color: rgba(255,255,255,.3); }
+    .foot .sp { display: inline-flex; align-items: center; gap: 12px; color: #ef285e; }
+    .foot svg { display: block; height: 20px; width: auto; margin-bottom: 2px; }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="row">
-      <span class="mk">ms</span>
+  <div class="og">
+    <canvas id="hero-flock"></canvas>
+    <div class="card">
       <h1>Mannan Shukla</h1>
-    </div>
-    <p class="lines">
-      inference platform engineering<br>
-      cloud native software engineer<br>
-      building tools for agents
-    </p>
-    <div class="foot">
-      <span>mannan.dev</span>
-      <span class="dot">/</span>
-      <span class="sp">getspawnpoint.com</span>
+      <p class="lines">
+        inference platform engineering<br>
+        cloud native software engineer<br>
+        building tools for agents
+      </p>
+      <div class="foot">
+        <span>mannan.dev</span>
+        <span class="dot">/</span>
+        <span class="sp"><svg viewBox="3.7 7.95 24.6 16.1" aria-hidden="true"><rect x="12.2" y="7.95" width="7.6" height="7.6" rx="1.4" fill="#ef285e"/><rect x="12.2" y="7.95" width="7.6" height="2.13" rx="1.4" fill="#ffd2de" opacity=".55"/><rect x="20.7" y="7.95" width="7.6" height="7.6" rx="1.4" fill="#ef285e"/><rect x="20.7" y="7.95" width="7.6" height="2.13" rx="1.4" fill="#ffd2de" opacity=".55"/><rect x="3.7" y="16.45" width="7.6" height="7.6" rx="1.4" fill="#ef285e"/><rect x="3.7" y="16.45" width="7.6" height="2.13" rx="1.4" fill="#ffd2de" opacity=".55"/><rect x="12.2" y="16.45" width="7.6" height="7.6" rx="1.4" fill="#ef285e"/><rect x="12.2" y="16.45" width="7.6" height="2.13" rx="1.4" fill="#ffd2de" opacity=".55"/></svg>getspawnpoint.com</span>
+      </div>
     </div>
   </div>
+  <script src="../brand/flock-frames.js"></script>
+  <script src="../brand/flock.js"></script>
 </body>
 </html>
