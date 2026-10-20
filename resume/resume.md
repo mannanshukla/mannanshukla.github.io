@@ -64,9 +64,9 @@ Sunnyvale, California • US Citizen
 
 - Built payment, lease-generation, and tenant-communication workflows in **LangGraph**/**MCP** with **Stripe** and **Twilio**
 
-### AdBlockIRL: AR ad-blocking
+### leadbot: outbound lead pipeline
 
-- Trained **YOLOv8** on **Roboflow** to detect 100+ concurrent ads at 5ms latency, applying real-time mosaic censoring via **OpenCV**; won $2000 at Bain Capital Ventures AI Hackathon
+- Built a **Node.js** **Discord** bot that turns a LinkedIn link into a verified work email and a **Gmail** draft via **treg**, with sent-email tracking and follow-up nudges; runs on **spawnpoint** ([blog post](https://getspawnpoint.com/blog/building-a-treg-powered-crm/))
 
 ## Education
 
