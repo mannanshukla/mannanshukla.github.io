@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mannan Shukla</title>
-  <meta name="description" content="Inference platform engineering, cloud native software engineering, building tools for agents.">
-  <meta name="theme-color" content="#171717">
+  <meta name="description" content="Building the future.">
+  <meta name="theme-color" content="#f2f2f2">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mannan.dev/">
   <meta property="og:title" content="Mannan Shukla">
-  <meta property="og:description" content="Inference platform engineering, cloud native software engineering, building tools for agents.">
+  <meta property="og:description" content="Building the future.">
   <meta property="og:image" content="https://mannan.dev/og.png?v=2">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -23,196 +23,246 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- spawnpoint's faces: Geist and Stack Sans Headline, both SIL Open Font License. -->
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Stack+Sans+Headline:wght@500&display=swap" rel="stylesheet">
+  <!-- Source Sans 3 (SIL Open Font License) stands in for Myriad where Myriad isn't installed. -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@600&display=swap" rel="stylesheet">
   <style>
-    /* spawnpoint's dark theme (getspawnpoint.com): the #171717 canvas, the
-       pink tile flock behind a black glass card, Geist for text, Stack Sans
-       Headline for the name, a white primary pill and glass secondary pills. */
+    /* The iOS 4 era apple.com, circa 2010: a soft gray page with a white
+       spotlight, a white card with a drop shadow, Myriad headline over
+       Lucida Grande text, the photo as an iPhoto print, a
+       glossy blue pill for the main link, the graphite global nav bar for
+       the links, and #0088cc links. */
     :root {
-      color-scheme: dark;
-      --canvas: #171717;
-      --foreground: #ffffff;
-      --muted: #a1a3a6;
-      --accent: #ef285e;
-      --font-ui: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-      --font-headline: "Stack Sans Headline", "Geist", ui-sans-serif, system-ui, sans-serif;
-      --ring: color-mix(in srgb, #fff 10%, transparent);
-      --glass: color-mix(in srgb, #fff 7%, transparent);
-      --glass-hover: color-mix(in srgb, #fff 12%, transparent);
-      --glass-edge: inset 0 1px 0 color-mix(in srgb, #fff 16%, transparent), 0 0 0 1px color-mix(in srgb, #fff 9%, transparent);
+      color-scheme: light;
+      --text: #333;
+      --muted: #666;
+      --link: #0088cc;
+      --font-ui: "Lucida Grande", "Lucida Sans Unicode", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+      --font-headline: "Myriad Set Pro", "Myriad Pro", "Source Sans 3", "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
     * { box-sizing: border-box; }
-    html { background: var(--canvas); }
+    html { background: #dcdcdc; }
     body {
       min-height: 100dvh;
       margin: 0;
       padding: 48px 16px;
       display: grid;
       place-items: center;
-      background: var(--canvas);
-      color: var(--foreground);
+      align-content: center;
+      gap: 20px;
+      background:
+        radial-gradient(ellipse 55% 45% at 50% 42%, #fff, rgba(255, 255, 255, 0) 100%),
+        linear-gradient(#f2f2f2, #d6d6d6);
+      color: var(--text);
       font-family: var(--font-ui);
-      font-size: 15px;
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-
-    /* The flock, fixed behind everything; brand/flock.js draws it. */
-    .stage {
-      position: fixed;
-      inset: 0;
-      overflow: hidden;
-      background: var(--canvas);
-    }
-    .stage canvas { display: block; width: 100%; height: 100%; }
-    .stage::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background: radial-gradient(ellipse 70% 60% at 50% 50%, color-mix(in srgb, #000 35%, transparent), transparent 70%);
+      font-size: 12px;
+      line-height: 18px;
     }
 
     main {
-      position: relative;
-      z-index: 1;
       width: min(100%, 560px);
-      padding: 40px;
+      padding: 40px 40px 32px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      border-radius: 17px;
-      background: color-mix(in srgb, #000 68%, transparent);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      box-shadow: inset 0 1px 0 color-mix(in srgb, #fff 14%, transparent), 0 0 0 1px var(--ring), 0 3px 10px 0.5px #0000000b, 0 12px 40px 2px #00000010;
+      border-radius: 8px;
+      background: linear-gradient(#fff 70%, #f6f6f6);
+      box-shadow:
+        0 0 0 1px rgba(0, 0, 0, .1),
+        0 1px 2px rgba(0, 0, 0, .15),
+        0 10px 30px rgba(0, 0, 0, .12);
+    }
+
+    /* The photo as an iPhoto print: a white border, a hairline edge, a soft
+       shadow where it lies on the page, and set down a little crooked. */
+    .shot {
+      width: 100%;
+      margin: 0;
+      padding: 8px;
+      transform: rotate(-1.5deg);
+      outline: 1px solid transparent; /* smooths the rotated edges in Firefox */
+      background: #fff;
+      box-shadow:
+        0 0 0 1px rgba(0, 0, 0, .1),
+        0 1px 3px rgba(0, 0, 0, .25),
+        0 6px 16px rgba(0, 0, 0, .14);
     }
     .photo {
       display: block;
       width: 100%;
       height: auto;
-      border-radius: 11px;
-      box-shadow: 0 0 0 1px var(--ring);
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, .08);
     }
+
     h1 {
-      margin: 28px 0 12px;
+      margin: 30px 0 10px;
       font-family: var(--font-headline);
-      font-weight: 500;
-      font-size: clamp(38px, 9vw, 56px);
-      line-height: 1;
-      letter-spacing: -0.025em;
+      font-weight: 600;
+      font-size: clamp(36px, 8vw, 48px);
+      line-height: 1.05;
+      letter-spacing: -.01em;
+      color: #333;
+      text-shadow: 0 1px 0 #fff;
     }
     .lead {
       margin: 0;
       color: var(--muted);
-      font-size: 18px;
-      line-height: 26px;
+      font-size: 16px;
+      line-height: 24px;
+      text-shadow: 0 1px 0 #fff;
     }
 
-    .btn {
+    /* iOS 4 gloss: a lighter top half that breaks hard at the middle. */
+    .btn-primary {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      height: 36px;
-      padding: 0 16px;
-      border-radius: 999px;
-      color: var(--foreground);
-      font-size: 14px;
-      font-weight: 500;
+      gap: 10px;
+      height: 40px;
+      padding: 0 20px 0 7px;
+      border: 1px solid #1a5fb4;
+      border-radius: 20px;
+      background: linear-gradient(#84c2ff, #439ff5 49%, #1f80e6 51%, #2b8df0);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .6),
+        inset 0 -1px 0 rgba(255, 255, 255, .15),
+        0 1px 2px rgba(0, 0, 0, .3);
+      color: #fff;
+      font-size: 15px;
+      font-weight: bold;
       line-height: 1;
       text-decoration: none;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, .35);
       white-space: nowrap;
-      transition: background-color .15s ease, box-shadow .15s ease;
     }
-    .btn:focus-visible { outline: 2px solid color-mix(in srgb, #fff 50%, transparent); outline-offset: 2px; }
-    .btn-primary {
-      height: 44px;
-      padding: 0 22px;
-      color: #000;
-      background: #fff;
-      font-size: 15px;
+    .btn-primary:hover { background: linear-gradient(#94cbff, #55a9f7 49%, #2c8aec 51%, #3897f3); }
+    .btn-primary:active {
+      background: linear-gradient(#2a7fd6, #1a6cc4 49%, #145fb2 51%, #1b6bc0);
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, .4), 0 1px 0 rgba(255, 255, 255, .6);
     }
-    .btn-primary:hover { box-shadow: 0 2px 8px #0000004d; }
-    .btn-ghost {
-      background: var(--glass);
-      backdrop-filter: blur(14px) saturate(1.3);
-      -webkit-backdrop-filter: blur(14px) saturate(1.3);
-      box-shadow: var(--glass-edge);
+    .btn-primary:focus-visible { outline: 3px solid rgba(0, 136, 204, .45); outline-offset: 2px; }
+
+    /* spawnpoint as an iOS 4 home screen icon: dark tile, pink mark, gloss arc,
+       and iOS 4's corner (10px on a 57px icon). */
+    .app-icon {
+      position: relative;
+      display: grid;
+      place-items: center;
+      flex: none;
+      width: 26px;
+      height: 26px;
+      overflow: hidden;
+      border-radius: 4.5px;
+      background: linear-gradient(#2e2e2e, #121212);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, .45), inset 0 0 0 1px rgba(255, 255, 255, .08);
     }
-    .btn-ghost:hover { background: var(--glass-hover); }
-    .btn svg { flex: none; width: 15px; height: 15px; fill: currentColor; }
-    .btn .mark { width: auto; height: 13px; margin-bottom: 1px; }
+    .app-icon::after {
+      content: "";
+      position: absolute;
+      top: -62%;
+      left: -30%;
+      width: 160%;
+      height: 112%;
+      border-radius: 50%;
+      background: linear-gradient(rgba(255, 255, 255, .45), rgba(255, 255, 255, .1));
+    }
+    .app-icon svg { position: relative; width: 18px; height: auto; }
 
     .cta { margin-top: 28px; }
+
+    /* The links ride the graphite global nav bar from the top of apple.com:
+       text only, equal segments, etched dividers. */
     .links {
       display: flex;
-      flex-wrap: wrap;
+      width: 100%;
+      margin-top: 24px;
+      overflow: hidden;
+      border: 1px solid #3a3a3a;
+      border-radius: 5px;
+      background: linear-gradient(#8a8a8a, #6b6b6b 48%, #565656 52%, #414141);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .3), 0 1px 2px rgba(0, 0, 0, .3);
+    }
+    .links a {
+      flex: 1 1 0;
+      display: flex;
+      align-items: center;
       justify-content: center;
-      gap: 8px;
-      margin-top: 16px;
+      height: 36px;
+      padding: 0 6px;
+      color: #fff;
+      font-size: 13px;
+      text-decoration: none;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, .6);
+      white-space: nowrap;
     }
-    .email { margin: 24px 0 0; font-size: 14px; }
-    .email a {
-      color: var(--muted);
-      text-decoration: underline;
-      text-decoration-color: color-mix(in srgb, var(--accent) 70%, transparent);
-      text-underline-offset: 3px;
+    .links a + a {
+      border-left: 1px solid #333;
+      box-shadow: inset 1px 0 0 rgba(255, 255, 255, .16);
     }
-    .email a:hover { color: var(--accent); }
+    .links a:hover { background: linear-gradient(#6e6e6e, #4f4f4f 48%, #3d3d3d 52%, #2c2c2c); }
+    .links a:active {
+      background: linear-gradient(#2f2f2f, #1f1f1f);
+      box-shadow: inset 0 1px 4px rgba(0, 0, 0, .6);
+    }
+    .links a:focus-visible { outline: 2px solid #7fc4ff; outline-offset: -3px; }
+
+    .email { margin: 22px 0 0; }
+    .email a { color: var(--link); text-decoration: none; text-shadow: 0 1px 0 #fff; }
+    .email a:hover { text-decoration: underline; }
+
+    /* apple.com's small print under the page. */
+    .sosumi {
+      margin: 0;
+      color: #808080;
+      font-size: 11px;
+      line-height: 14px;
+      text-align: center;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
+    }
 
     @media (max-width: 560px) {
       body { padding: 24px 16px; }
-      main { padding: 24px; }
+      main { padding: 24px 20px 24px; }
+      .shot { padding: 6px; }
       h1 { margin-top: 24px; }
-      .lead { font-size: 16px; line-height: 24px; }
-      .cta, .cta .btn { width: 100%; }
-      .links { display: grid; grid-template-columns: 1fr 1fr; width: 100%; }
+      .lead { font-size: 14px; line-height: 22px; }
+      .cta, .cta .btn-primary { width: 100%; }
+      .links a { font-size: 12px; padding: 0 2px; }
     }
   </style>
 </head>
 <body>
-  <div class="stage" aria-hidden="true"><canvas id="hero-flock"></canvas></div>
   <main>
-    <img class="photo" src="mannan5.jpg" alt="Mannan Shukla" width="1115" height="676">
+    <figure class="shot">
+      <img class="photo" src="mannan5.jpg" alt="Mannan Shukla" width="1115" height="676">
+    </figure>
     <h1>Mannan Shukla</h1>
-    <p class="lead">
-      inference platform engineering<br>
-      cloud native software engineer<br>
-      building tools for agents
-    </p>
+    <p class="lead">building the future</p>
     <div class="cta">
-      <a class="btn btn-primary" href="https://getspawnpoint.com">
-        <!-- spawnpoint's mark, the pink S tetromino (brand/mark.svg on getspawnpoint.com). -->
-        <svg class="mark" viewBox="3.7 7.95 24.6 16.1" aria-hidden="true"><rect x="12.2" y="7.95" width="7.6" height="7.6" rx="1.4" fill="#ef285e"/><rect x="12.2" y="7.95" width="7.6" height="2.13" rx="1.4" fill="#ffd2de" opacity=".55"/><rect x="20.7" y="7.95" width="7.6" height="7.6" rx="1.4" fill="#ef285e"/><rect x="20.7" y="7.95" width="7.6" height="2.13" rx="1.4" fill="#ffd2de" opacity=".55"/><rect x="3.7" y="16.45" width="7.6" height="7.6" rx="1.4" fill="#ef285e"/><rect x="3.7" y="16.45" width="7.6" height="2.13" rx="1.4" fill="#ffd2de" opacity=".55"/><rect x="12.2" y="16.45" width="7.6" height="7.6" rx="1.4" fill="#ef285e"/><rect x="12.2" y="16.45" width="7.6" height="2.13" rx="1.4" fill="#ffd2de" opacity=".55"/></svg>
+      <a class="btn-primary" href="https://getspawnpoint.com">
+        <span class="app-icon" aria-hidden="true">
+          <!-- spawnpoint's mark, the pink S tetromino (brand/mark.svg on getspawnpoint.com). -->
+          <svg viewBox="3.7 7.95 24.6 16.1"><rect x="12.2" y="7.95" width="7.6" height="7.6" rx="1.4" fill="#ef285e"/><rect x="12.2" y="7.95" width="7.6" height="2.13" rx="1.4" fill="#ffd2de" opacity=".55"/><rect x="20.7" y="7.95" width="7.6" height="7.6" rx="1.4" fill="#ef285e"/><rect x="20.7" y="7.95" width="7.6" height="2.13" rx="1.4" fill="#ffd2de" opacity=".55"/><rect x="3.7" y="16.45" width="7.6" height="7.6" rx="1.4" fill="#ef285e"/><rect x="3.7" y="16.45" width="7.6" height="2.13" rx="1.4" fill="#ffd2de" opacity=".55"/><rect x="12.2" y="16.45" width="7.6" height="7.6" rx="1.4" fill="#ef285e"/><rect x="12.2" y="16.45" width="7.6" height="2.13" rx="1.4" fill="#ffd2de" opacity=".55"/></svg>
+        </span>
         check out spawnpoint
       </a>
     </div>
-    <!-- icons: Font Awesome Free 6.7.2 (CC BY 4.0): https://fontawesome.com/license/free -->
     <nav class="links" aria-label="Links">
-      <a class="btn btn-ghost" href="/resume">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" aria-hidden="true"><path d="M64 464c-8.8 0-16-7.2-16-16L48 64c0-8.8 7.2-16 16-16l160 0 0 80c0 17.7 14.3 32 32 32l80 0 0 288c0 8.8-7.2 16-16 16L64 464zM64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-293.5c0-17-6.7-33.3-18.7-45.3L274.7 18.7C262.7 6.7 246.5 0 229.5 0L64 0zm56 256c-13.3 0-24 10.7-24 24s10.7 24 24 24l144 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-144 0zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24l144 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-144 0z"/></svg>
+      <a href="/resume">
         Resume
       </a>
-      <a class="btn btn-ghost" href="https://github.com/mannanshukla">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" aria-hidden="true"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      <a href="https://github.com/mannanshukla">
         GitHub
       </a>
-      <a class="btn btn-ghost" href="https://linkedin.com/in/mannanshukla">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      <a href="https://linkedin.com/in/mannanshukla">
         LinkedIn
       </a>
-      <a class="btn btn-ghost" href="https://x.com/collagenfan">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+      <a href="https://x.com/collagenfan">
         Twitter
       </a>
     </nav>
     <p class="email"><a href="mailto:mannanshukla@icloud.com">mannanshukla@icloud.com</a></p>
   </main>
-  <script src="brand/flock-frames.js"></script>
-  <script src="brand/flock.js"></script>
+  <p class="sosumi">Copyright &copy; 2026 Mannan Shukla. All rights reserved.</p>
 </body>
 </html>
