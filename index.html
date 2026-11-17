@@ -170,6 +170,70 @@
 
     .cta { margin-top: 28px; }
 
+    /* The other projects as apple.com's promo row: two white boxes in a
+       recessed gray well, each an app icon beside a bold name and a line of
+       gray text, the name turning blue on hover. */
+    .apps {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      width: 100%;
+      margin: 28px 0 0;
+      padding: 8px;
+      list-style: none;
+      border-radius: 6px;
+      background: linear-gradient(#e9e9e9, #f1f1f1);
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, .15), 0 1px 0 #fff;
+    }
+    .app {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      height: 100%;
+      padding: 10px 12px;
+      border-radius: 4px;
+      background: linear-gradient(#fff, #f7f7f7);
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, .1), 0 1px 2px rgba(0, 0, 0, .1);
+      color: var(--text);
+      text-align: left;
+      text-decoration: none;
+    }
+    /* A shade darker than the #0088cc links so the small bold name keeps
+       4.5:1 on the white box, and an opaque ring that reads on the gray well. */
+    .app:hover .app-name { color: #0070a8; }
+    .app:active { background: linear-gradient(#f1f1f1, #fafafa); }
+    .app:focus-visible { outline: 2px solid #0070a8; outline-offset: 2px; }
+    .app-tile {
+      display: grid;
+      place-items: center;
+      flex: none;
+      width: 44px;
+      height: 44px;
+    }
+    .app-tile img { display: block; }
+    /* The iPod apps icon is a flat square: give it the iOS 4 corner and the
+       same gloss arc as the spawnpoint icon. Bay Day's Mac icon already has
+       its own shape and shadow, so it is shown as drawn. */
+    .app-tile-ios {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, .4);
+    }
+    .app-tile-ios::after {
+      content: "";
+      position: absolute;
+      top: -62%;
+      left: -30%;
+      width: 160%;
+      height: 112%;
+      border-radius: 50%;
+      background: linear-gradient(rgba(255, 255, 255, .45), rgba(255, 255, 255, .08));
+    }
+    .app-text { display: flex; flex-direction: column; min-width: 0; }
+    .app-name { font-size: 13px; font-weight: bold; line-height: 17px; }
+    .app-desc { color: var(--muted); font-size: 11px; line-height: 14px; }
+
     /* The links ride the graphite global nav bar from the top of apple.com:
        text only, equal segments, etched dividers. */
     .links {
@@ -227,6 +291,7 @@
       h1 { margin-top: 24px; }
       .lead { font-size: 14px; line-height: 22px; }
       .cta, .cta .btn-primary { width: 100%; }
+      .apps { grid-template-columns: 1fr; }
       .links a { font-size: 12px; padding: 0 2px; }
     }
   </style>
@@ -247,6 +312,26 @@
         check out spawnpoint
       </a>
     </div>
+    <ul class="apps" aria-label="Other projects">
+      <li>
+        <a class="app" href="/ipod/">
+          <span class="app-tile app-tile-ios" aria-hidden="true"><img src="icons/ipod.png" alt="" width="44" height="44"></span>
+          <span class="app-text">
+            <span class="app-name">iPod apps</span>
+            <span class="app-desc">Ten native apps for a 2010 iPod touch</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a class="app" href="/bayday/">
+          <span class="app-tile" aria-hidden="true"><img src="icons/bayday.png" alt="" width="52" height="52"></span>
+          <span class="app-text">
+            <span class="app-name">Bay Day</span>
+            <span class="app-desc">Fly a floatplane over the real San Francisco Bay</span>
+          </span>
+        </a>
+      </li>
+    </ul>
     <nav class="links" aria-label="Links">
       <a href="/resume">
         Resume
